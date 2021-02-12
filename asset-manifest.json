@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/Bishops-Lawn-Care/static/css/main.383174af.chunk.css",
+    "main.js": "/Bishops-Lawn-Care/static/js/main.c4e19aa7.chunk.js",
+    "main.js.map": "/Bishops-Lawn-Care/static/js/main.c4e19aa7.chunk.js.map",
+    "runtime-main.js": "/Bishops-Lawn-Care/static/js/runtime-main.b818ae80.js",
+    "runtime-main.js.map": "/Bishops-Lawn-Care/static/js/runtime-main.b818ae80.js.map",
+    "static/js/2.241bd9df.chunk.js": "/Bishops-Lawn-Care/static/js/2.241bd9df.chunk.js",
+    "static/js/2.241bd9df.chunk.js.map": "/Bishops-Lawn-Care/static/js/2.241bd9df.chunk.js.map",
+    "index.html": "/Bishops-Lawn-Care/index.html",
+    "precache-manifest.c4fc42b0aac1b9eab3835870b8458b4d.js": "/Bishops-Lawn-Care/precache-manifest.c4fc42b0aac1b9eab3835870b8458b4d.js",
+    "service-worker.js": "/Bishops-Lawn-Care/service-worker.js",
+    "static/css/main.383174af.chunk.css.map": "/Bishops-Lawn-Care/static/css/main.383174af.chunk.css.map",
+    "static/js/2.241bd9df.chunk.js.LICENSE.txt": "/Bishops-Lawn-Care/static/js/2.241bd9df.chunk.js.LICENSE.txt",
+    "static/media/cap-white-front-logo.png": "/Bishops-Lawn-Care/static/media/cap-white-front-logo.4f007b02.png",
+    "static/media/dropdown-arrow.jpeg": "/Bishops-Lawn-Care/static/media/dropdown-arrow.2e2ddc5b.jpeg",
+    "static/media/gallery-1-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-1-temp.769743de.jpg",
+    "static/media/gallery-10-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-10-temp.a41ad3b0.jpg",
+    "static/media/gallery-2-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-2-temp.3724e9cb.jpg",
+    "static/media/gallery-3-temp.png": "/Bishops-Lawn-Care/static/media/gallery-3-temp.566a0036.png",
+    "static/media/gallery-4-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-4-temp.bc97f680.jpg",
+    "static/media/gallery-5-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-5-temp.a160fa4d.jpg",
+    "static/media/gallery-6-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-6-temp.8da74f9a.jpg",
+    "static/media/gallery-7-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-7-temp.3bea4d49.jpg",
+    "static/media/gallery-8-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-8-temp.b4cd72da.jpg",
+    "static/media/gallery-9-temp.jpg": "/Bishops-Lawn-Care/static/media/gallery-9-temp.9114c7bf.jpg",
+    "static/media/Homepage.module.css": "/Bishops-Lawn-Care/static/media/grass2.12e0d1f2.png",
+    "static/media/logo2.png": "/Bishops-Lawn-Care/static/media/logo2.6f9f6158.png",
+    "static/media/mug-white-logo3.png": "/Bishops-Lawn-Care/static/media/mug-white-logo3.49eacfe2.png",
+    "static/media/t-shirt-white.png": "/Bishops-Lawn-Care/static/media/t-shirt-white.2d4a3aa0.png",
+    "static/media/testimonial-john.jpg": "/Bishops-Lawn-Care/static/media/testimonial-john.72142fc6.jpg",
+    "static/media/testimonial-mackenzie.jpeg": "/Bishops-Lawn-Care/static/media/testimonial-mackenzie.6c2199f1.jpeg",
+    "static/media/uhost-icon.png": "/Bishops-Lawn-Care/static/media/uhost-icon.e8cf5d29.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b818ae80.js",
+    "static/js/2.241bd9df.chunk.js",
+    "static/css/main.383174af.chunk.css",
+    "static/js/main.c4e19aa7.chunk.js"
+  ]
+}
