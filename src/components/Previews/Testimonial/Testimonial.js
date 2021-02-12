@@ -17,7 +17,7 @@ const testimonial = () => {
           <h1>John</h1>
           <img src={John} alt="John"></img>
         </div>
-      </div>
+      </div> 
       <div className={classes.Testimonial_Mackenzie}>
         <div className={classes.Name_Image}>
           <h1>Mackenzie</h1>

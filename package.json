@@ -1,7 +1,7 @@
 {
   "name": "bishop-lawn-care",
   "version": "0.1.0",
-  "homepage": "http://Cboles96.github.io/Bishops-Lawn-Care",
+  "homepage": "http://Cboles96.github.io/bishops-lawn",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
