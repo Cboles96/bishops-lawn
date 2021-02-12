@@ -1,0 +1,115 @@
+.Modal_Container {
+  width: 50%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  z-index: 1000;
+  animation: fade-in 0.5s;
+}
+
+.Modal_Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.Modal_Content h2 {
+  padding: 12px;
+  color: white;
+  text-align: center;
+}
+
+.Modal_Hidden {
+  display: none !important;
+}
+
+.Logo {
+  width: 200px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form input {
+  width: 100%;
+  margin: 12px;
+  padding: 10px 15px;
+}
+
+form button {
+  height: 40px;
+  width: 100px;
+  margin: 20px;
+  color: white;
+  background-color: rgb(8, 185, 255);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+form button:disabled {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+  color: gray;
+}
+
+button span {
+  font-size: 1rem;
+}
+
+form a {
+  margin: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+form a:hover {
+  color: rgb(150, 150, 150);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 930px) {
+
+  .Logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 517px) {
+  .Modal_Container {
+    width: 80%;
+    height: 500px;
+    top: 15%;
+    left: 10%;
+  }
+
+  .Modal_Content h2 {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .Logo {
+    width: 100px;
+  }
+}

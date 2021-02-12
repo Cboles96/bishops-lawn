@@ -1,0 +1,17 @@
+.NavigationItem {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.NavigationItem a {
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+
+.NavigationItem a:hover {
+  opacity: 0.5;
+}

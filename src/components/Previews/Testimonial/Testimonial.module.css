@@ -1,0 +1,132 @@
+.Testimonial_Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Testimonial_John {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 800px;
+  margin: auto;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+}
+
+.Testimonial_Mackenzie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 800px;
+  margin: 0;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+}
+
+.Testimonial_John p {
+  width: 200px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  line-height: 2rem;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  text-align: right;
+}
+
+.Testimonial_Mackenzie p {
+  width: 200px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  line-height: 2rem;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  text-align: left;
+}
+
+.Name_Image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Name_Image h1 {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 3rem;
+  color: white;
+  text-decoration: underline;
+  order: 1;
+}
+
+.Name_Image img {
+  max-width: 20rem;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1257px) {
+  .Testimonial_Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Testimonial_John,
+  .Testimonial_Mackenzie {
+    width: 100%;
+  }
+
+  .Testimonial_Mackenzie {
+    background-image: none;
+    background-color: rgb(13, 104, 13);
+  }
+}
+
+@media (max-width: 637px) {
+  .Testimonial_Hover,
+  .Testimonial_Hover h2 {
+    font-size: 1.5rem;
+    width: 100px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .Testimonial_Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Testimonial_John,
+  .Testimonial_Mackenzie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .Testimonial_John p,
+  .Testimonial_Mackenzie p {
+    font-size: 1rem;
+    margin: 15px 20px;
+    order: 3;
+    text-align: center;
+  }
+
+  .Name_Image img {
+    height: 20rem;
+  }
+
+  .Name_Image h1 {
+    margin: 0;
+  }
+
+  .Testimonial_Mackenzie .Name_Image {
+    order: 0;
+  }
+}

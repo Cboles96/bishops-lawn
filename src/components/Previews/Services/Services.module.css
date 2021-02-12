@@ -1,0 +1,77 @@
+.Services_Container {
+  height: 800px;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+}
+
+.Services_Images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px 100px;
+  align-items: center;
+  justify-items: center;
+  padding-top: 100px;
+}
+
+.Mowing img,
+.Weed_Eating img,
+.Leaf_Blowing img {
+  width: 400px;
+}
+
+.Mowing img:hover,
+.Weed_Eating img:hover,
+.Leaf_Blowing img:hover {
+  opacity: 0.8;
+}
+
+.Mowing_Description,
+.Weed_Eating_Description,
+.Leaf_Blowing_Description {
+  color: white;
+  text-align: center;
+}
+
+.Mowing_Description {
+  width: 50%;
+  height: 50%;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.Weed_Eating_Description {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.Leaf_Blowing_Description {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+@media (max-width: 1615px) {
+  .Weed_Eating,
+  .Mowing,
+  .Leaf_Blowing {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1375px) {
+  .Services_Images {
+    align-items: center;
+  }
+
+  .Mowing {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1215px) {
+  .Services_Container {
+    height: 1600px;
+  }
+
+  .Services_Images {
+    flex-direction: column;
+  }
+}

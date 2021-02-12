@@ -1,0 +1,30 @@
+.Backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    animation: fade-in 1s;
+}
+
+.Backdrop_Hidden {
+    display: none !important;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 400px) {
+    .Backdrop {
+        height: 100%;
+    }
+}

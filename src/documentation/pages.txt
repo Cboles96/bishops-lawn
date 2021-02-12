@@ -1,0 +1,10 @@
+The different web pages to navigate to and from.
+
+Ideas:
+
+Homepage - The place to display testimonials, preview of services, demonstration pictures.
+About us - A blurb about Bishop's Lawn Care, history of business, cards detailing employees.
+Services - Description of services offered and offers to choose from.
+Gallery - The place to find all pictures showing demos of work.
+Store - Contains merchandise such as hats, mugs, t-shirts & more.
+Contact us - An email page where visitors can quickly email Bishop's Lawn Care.

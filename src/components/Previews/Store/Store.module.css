@@ -1,0 +1,123 @@
+.Store_Container {
+  width: 100%;
+  height: 800px;
+  padding-top: 50px;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Store_Container h1,
+.Store_Container h2 {
+  color: white;
+}
+
+.Percent {
+  font-size: 2rem;
+  color: red;
+}
+
+.Code {
+  color: yellow;
+}
+
+.Store_Items {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "t h m"
+                       "tt ht mt";
+  align-items: center;
+  justify-items: center;
+}
+
+.Tshirt {
+  width: 400px;
+  grid-area: t;
+}
+
+.Hat {
+  width: 400px;
+  grid-area: h;
+}
+
+.Mug {
+  width: 400px;
+  grid-area: m;
+  padding-top: 50px;
+  padding-right: 50px;
+}
+
+.Tshirt_Tag {
+  grid-area: tt;
+}
+
+.Hat_Tag {
+  grid-area: ht;
+}
+
+.Mug_Tag {
+  grid-area: mt;
+}
+
+.Tshirt:hover,
+.Hat:hover,
+.Mug:hover {
+  opacity: 0.8;
+}
+
+.Store_Container h3 {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 1220px) {
+
+  .Store_Container {
+    height: 1600px;
+  }
+
+  .Store_Items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Tshirt,
+  .Hat,
+  .Mug {
+    width: 300px;
+  }
+
+  .Tshirt_Tag,
+  .Hat_Tag,
+  .Mug_Tag {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .Store_Container h1,
+  .Store_Container h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .Store_Container {
+    height: 1150px;
+  }
+
+  .Tshirt,
+  .Hat,
+  .Mug {
+    width: 250px;
+  }
+
+  .Mug {
+    padding-top: 0;
+    padding-right: 20px;
+  }
+}

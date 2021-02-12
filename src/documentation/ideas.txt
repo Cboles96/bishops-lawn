@@ -1,0 +1,9 @@
+List of current ideas for implementation:
+
+* 
+
+Add a page for merchandise, ex: shirts, mugs, pillows.  
+I've never implemented anything like this before so not sure if 
+I will be able to do this on my own.
+
+*

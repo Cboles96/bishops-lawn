@@ -1,0 +1,41 @@
+.Zoomed_Image_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Zoomed_Image {
+    width: 1000px;
+    height: 600px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+    cursor: zoom-out;
+    animation: fade-in 1s;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.Zoomed_Image_Hidden {
+    display: none !important;
+}
+
+@media (max-width: 1020px) {
+    .Zoomed_Image {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
