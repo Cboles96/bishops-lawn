@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
+import * as actions from "../../store/actions/index";
+import { updateObject } from "../../shared/utility";
 
 import PreviewButton from "../../UI/PreviewButton/PreviewButton";
 import Services from "../../components/Previews/Services/Services";
@@ -12,9 +16,6 @@ import Aux from "../../hoc/Aux";
 
 class Homepage extends Component {
   state = {
-    services: false,
-    testimonial: true,
-    store: false,
     backdrop: false,
     modal: false,
     validation: {
@@ -41,16 +42,32 @@ class Homepage extends Component {
     const testimonialTag = "What our Clients have to say...";
     const storeTag = "Check out our Virtual Store!";
 
+    let services = null;
+    let testimonial = null;
+    let store = null;
+
     const servicesMouseOverHandler = () => {
-      this.setState({ services: true, testimonial: false, store: false });
+      // this.setState({ services: true, testimonial: false, store: false });
+      services = true;
+      testimonial = false;
+      store = false;
+      this.props.onServices(services, testimonial, store);
     };
 
     const testimonialMouseOverHandler = () => {
-      this.setState({ services: false, testimonial: true, store: false });
+      // this.setState({ services: false, testimonial: true, store: false });
+      services = false;
+      testimonial = true;
+      store = false;
+      this.props.onTestimonial(services, testimonial, store);
     };
 
     const storeMouseOverHandler = () => {
-      this.setState({ services: false, testimonial: false, store: true });
+      // this.setState({ services: false, testimonial: false, store: true });
+      services = false;
+      testimonial = false;
+      store = true;
+      this.props.onStore(services, testimonial, store);
     };
 
     const backdropClickedHandler = () => {
@@ -96,14 +113,41 @@ class Homepage extends Component {
           <PreviewButton mouseover={storeMouseOverHandler} tag={storeTag} />
         </div>
 
-        {this.state.services ? <Services /> : null}
+        {this.props.ser ? <Services /> : null}
 
-        {this.state.testimonial ? <Testimonial /> : null}
+        {this.props.test ? <Testimonial /> : null}
 
-        {this.state.store ? <Store /> : null}
+        {this.props.st ? <Store /> : null}
       </Aux>
     );
   }
 }
 
-export default Homepage;
+const mapStateToProps = (state) => {
+  return {
+    ser: state.services,
+    test: state.testimonial,
+    st: state.store,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onServices: (services, testimonial, store) =>
+      dispatch(actions.servicesMouseOver(services, testimonial, store)),
+    onTestimonial: (services, testimonial, store) =>
+      dispatch(actions.testimonialMouseOver(services, testimonial, store)),
+    onStore: (services, testimonial, store) =>
+      dispatch(actions.storeMouseOver(services, testimonial, store)),
+  };
+};
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     onAuth: (email, password, isSignup) =>
+//       dispatch(actions.auth(email, password, isSignup)),
+//     onSetAuthRedirectPath: () => dispatch(actions.setAuthRedirectPath("/")),
+//   };
+// };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

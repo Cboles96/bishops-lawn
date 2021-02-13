@@ -11,6 +11,10 @@
   display: none;
 }
 
+.Menu {
+  cursor: pointer;
+}
+
 .Left_Header {
   display: flex;
   align-items: center;

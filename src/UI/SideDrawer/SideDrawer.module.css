@@ -1,0 +1,39 @@
+.SideDrawer {
+  width: 50%;
+  height: 250px;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  z-index: 300;
+  animation: fade-in 1s;
+}
+
+.SideDrawer_Hidden {
+  display: none !important;
+}
+
+.Link_List {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: none;
+}
+
+@media (max-width: 900px) {
+    .Link_List {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

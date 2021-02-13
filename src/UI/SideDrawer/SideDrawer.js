@@ -1,12 +1,33 @@
-import classes from "*.module.css";
-import React from "react";
+import React, { useState } from "react";
 
-import classes from '../SideDrawer/SideDrawer.module.css';
+import NavigationItem from "../../components/Navigation/NavigationItem/NavigationItem";
 
-const sidedrawer = (props) => (
-  <div className={classes.SideDrawer}>
-      
-  </div>
-);
+import classes from "../SideDrawer/SideDrawer.module.css";
 
-export default sidedrawer;
+const SideDrawer = (props) => {
+  const [sidedrawer, showSideDrawer] = useState(true);
+
+  const sidedrawerClickedHandler = () => {
+    showSideDrawer(false);
+  };
+
+  return (
+    <div
+      className={
+        props.sidedrawerState && sidedrawer
+          ? classes.SideDrawer
+          : `${classes.SideDrawer} ${classes.SideDrawer_Hidden}`
+      }
+    >
+      <ul className={classes.Link_List}>
+        <NavigationItem link="/about">About</NavigationItem>
+        <NavigationItem link="/services">Services</NavigationItem>
+        <NavigationItem link="/gallery">Gallery</NavigationItem>
+        <NavigationItem link="/store">Store</NavigationItem>
+        <NavigationItem link="/contact">Contact Us</NavigationItem>
+      </ul>
+    </div>
+  );
+};
+
+export default SideDrawer;
