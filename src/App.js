@@ -15,9 +15,9 @@ function App() {
 
   routes = (
     <Switch>
-      <Route path="/" exact component={Homepage} />
-      <Route path="/services" exact component={Services} />
-      <Route path="/gallery" exact component={Gallery} />
+      <Route path="/bishops-lawn" component={Homepage} />
+      <Route path="/services" component={Services} />
+      <Route path="/gallery" component={Gallery} />
     </Switch>
   );
 

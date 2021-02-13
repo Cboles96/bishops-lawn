@@ -2,6 +2,7 @@ import React from "react";
 
 import Aux from "../../hoc/Aux";
 import NavigationItem from "./NavigationItem/NavigationItem";
+import Gallery from '../../pages/Gallery/Gallery';
 
 import Logo from "../../assets/images/icons/logo2.png";
 import Menu from "../../assets/images/icons/controls/green-buttons/menu.png";
@@ -17,7 +18,7 @@ const navigationItems = () => (
         <div className={classes.DrawerToggle}>
           <img src={Menu} alt="Menu"></img>
         </div>
-        <NavigationItem link="/">
+        <NavigationItem link="/bishops-lawn">
           <img className={classes.Logo} src={Logo} alt="Logo"></img>
         </NavigationItem>
         <a
@@ -41,7 +42,7 @@ const navigationItems = () => (
         <ul className={classes.NavigationItems}>
           <NavigationItem link="/about">About</NavigationItem>
           <NavigationItem link="/services">Services</NavigationItem>
-          <NavigationItem link="/gallery">Gallery</NavigationItem>
+          <NavigationItem link="/gallery" component={Gallery}>Gallery</NavigationItem>
           <NavigationItem link="/store">Store</NavigationItem>
           <NavigationItem link="/contact">Contact Us</NavigationItem>
         </ul>
