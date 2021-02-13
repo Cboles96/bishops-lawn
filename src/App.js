@@ -15,7 +15,7 @@ function App() {
 
   routes = (
     <Switch>
-      <Route path="/Bishops-Lawn-Care" exact component={Homepage} />
+      <Route path="/bishops-lawn" exact component={Homepage} />
       <Route path="/services" exact component={Services} />
       <Route path="/gallery" exact component={Gallery} />
     </Switch>
