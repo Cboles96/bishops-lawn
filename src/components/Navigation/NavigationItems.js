@@ -17,7 +17,7 @@ const navigationItems = () => (
         <div className={classes.DrawerToggle}>
           <img src={Menu} alt="Menu"></img>
         </div>
-        <a href="/home">
+        <a href="/">
           <img className={classes.Logo} src={Logo} alt="Logo"></img>
         </a>
         <a

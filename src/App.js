@@ -15,7 +15,7 @@ function App() {
 
   routes = (
     <Switch>
-      <Route path="/home" exact component={Homepage} />
+      <Route path="/" exact component={Homepage} />
       <Route path="/services" exact component={Services} />
       <Route path="/gallery" exact component={Gallery} />
     </Switch>
