@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bishops-lawn/precache-manifest.31266e5e0d18337f8646e3b04cea56d5.js"
+  "/bishops-lawn/precache-manifest.0f00c81f6c26c4138f3cab04ea9a6c45.js"
 );
 
 self.addEventListener('message', (event) => {
