@@ -4,6 +4,7 @@ import Aux from "../../hoc/Aux";
 import Carousel from '../../components/Carousel/Carousel';
 import Backdrop from "../../UI/Backdrop/Backdrop";
 import ZoomedImage from "../../components/ZoomedImage/ZoomedImage";
+import Jumbo from '../../components/Jumbo/Jumbo';
 
 import classes from "../Gallery/Gallery.module.css";
 
@@ -42,6 +43,7 @@ class Gallery extends Component {
 
     return (
       <Aux>
+        <Jumbo></Jumbo>
         <section className={classes.Welcome}>
           <img src={photos} alt="Photos"></img>
           <h1>Welcome to our Gallery!</h1>

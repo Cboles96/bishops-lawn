@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import * as actions from "../../store/actions/index";
-import { updateObject } from "../../shared/utility";
 
 import PreviewButton from "../../UI/PreviewButton/PreviewButton";
 import Services from "../../components/Previews/Services/Services";
@@ -10,12 +9,16 @@ import Testimonial from "../../components/Previews/Testimonial/Testimonial";
 import Store from "../../components/Previews/Store/Store";
 import Backdrop from "../../UI/Backdrop/Backdrop";
 import LoginModal from "../../components/Login-Modal/Login-Modal";
+import Jumbo from "../../components/Jumbo/Jumbo";
 
 import classes from "../Homepage/Homepage.module.css";
 import Aux from "../../hoc/Aux";
 
 class Homepage extends Component {
   state = {
+    servicesActive: false,
+    testimonialActive: true,
+    storeActive: false,
     backdrop: false,
     modal: false,
     validation: {
@@ -51,6 +54,11 @@ class Homepage extends Component {
       services = true;
       testimonial = false;
       store = false;
+      this.setState({
+        servicesActive: true,
+        testimonialActive: false,
+        storeActive: false,
+      });
       this.props.onServices(services, testimonial, store);
     };
 
@@ -59,6 +67,11 @@ class Homepage extends Component {
       services = false;
       testimonial = true;
       store = false;
+      this.setState({
+        servicesActive: false,
+        testimonialActive: true,
+        storeActive: false,
+      });
       this.props.onTestimonial(services, testimonial, store);
     };
 
@@ -67,6 +80,11 @@ class Homepage extends Component {
       services = false;
       testimonial = false;
       store = true;
+      this.setState({
+        servicesActive: false,
+        testimonialActive: false,
+        storeActive: true,
+      });
       this.props.onStore(services, testimonial, store);
     };
 
@@ -95,22 +113,19 @@ class Homepage extends Component {
           emailChanged={emailChangedHandler}
           passwordChanged={passwordChangedHandler}
         />
-        <div className={classes.Background}>
-          <h1>
-            The go-to Lawn Care service for Middle Tennessee Residents and
-            Business Owners
-          </h1>
-        </div>
+        <Jumbo></Jumbo>
         <div className={classes.Preview_Grid}>
           <PreviewButton
             mouseover={servicesMouseOverHandler}
+            servicesState={this.state.servicesActive}
             tag={servicesTag}
           />
           <PreviewButton
             mouseover={testimonialMouseOverHandler}
+            testimonialState={this.state.testimonialActive}
             tag={testimonialTag}
           />
-          <PreviewButton mouseover={storeMouseOverHandler} tag={storeTag} />
+          <PreviewButton mouseover={storeMouseOverHandler} storeState={this.state.storeActive} tag={storeTag} />
         </div>
 
         {this.props.ser ? <Services /> : null}

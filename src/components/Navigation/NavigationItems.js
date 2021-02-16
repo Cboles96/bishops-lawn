@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Aux from "../../hoc/Aux";
 import NavigationItem from "./NavigationItem/NavigationItem";
 import Backdrop from "../../UI/Backdrop/Backdrop";
-import SideDrawer from '../../UI/SideDrawer/SideDrawer';
+import SideDrawer from "../../UI/SideDrawer/SideDrawer";
 
 import Logo from "../../assets/images/icons/logo2.png";
-import Menu from "../../assets/images/icons/controls/green-buttons/menu.png";
+import Menu from "../../assets/images/icons/menu.png";
 import FacebookLink from "../../assets/images/icons/social-media/facebook.png";
 import InstagramLink from "../../assets/images/icons/social-media/instagram.png";
 
@@ -19,25 +19,30 @@ const NavigationItems = () => {
   const menuBtnClickedHandler = () => {
     showBackdrop(true);
     showSideDrawer(true);
-  }
+  };
 
   const backdropClickedHandler = () => {
     showBackdrop(false);
     showSideDrawer(false);
-  }
+  };
 
   return (
     <Aux>
-      <Backdrop backdropState={backdrop} clicked={backdropClickedHandler} ></Backdrop>
+      <Backdrop
+        backdropState={backdrop}
+        clicked={backdropClickedHandler}
+      ></Backdrop>
       <header className={classes.Header}>
+        <div className={classes.DrawerToggle}>
+          <img
+            className={classes.Menu}
+            src={Menu}
+            alt="Menu"
+            onClick={menuBtnClickedHandler}
+          ></img>
+        </div>
+        <SideDrawer sidedrawerState={sidedrawer}></SideDrawer>
         <div className={classes.Left_Header}>
-          <div className={classes.DrawerToggle}>
-            <img className={classes.Menu} src={Menu} alt="Menu" onClick={menuBtnClickedHandler}></img>
-          </div>
-          <NavigationItem link="/bishops-lawn">
-            <img className={classes.Logo} src={Logo} alt="Logo"></img>
-          </NavigationItem>
-          <SideDrawer sidedrawerState={sidedrawer} ></SideDrawer>
           <a
             className={classes.InstagramLink}
             href="/"
@@ -46,6 +51,9 @@ const NavigationItems = () => {
           >
             <img src={InstagramLink} alt="Instagram Link"></img>
           </a>
+          <NavigationItem link="/bishops-lawn">
+            <img className={classes.Logo} src={Logo} alt="Logo"></img>
+          </NavigationItem>
           <a
             className={classes.FacebookLink}
             href="https://www.facebook.com/Bishops-Lawn-Care-531145520277013/"

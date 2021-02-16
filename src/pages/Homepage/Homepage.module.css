@@ -2,26 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
-.Background {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../../assets/images/grass2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  position: relative;
-}
-
-.Background h1 {
-  font-family: "Montserrat Subrayada", sans-serif;
-  font-size: 3rem;
-  position: absolute;
-  color: white;
-  text-align: center;
-  width: 70%;
-}
-
 .Preview_Grid {
   width: 100%;
   display: grid;

@@ -1,20 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
 import NavigationItem from "../../components/Navigation/NavigationItem/NavigationItem";
 
 import classes from "../SideDrawer/SideDrawer.module.css";
 
 const SideDrawer = (props) => {
-  const [sidedrawer, showSideDrawer] = useState(true);
-
-  const sidedrawerClickedHandler = () => {
-    showSideDrawer(false);
-  };
 
   return (
     <div
       className={
-        props.sidedrawerState && sidedrawer
+        props.sidedrawerState
           ? classes.SideDrawer
           : `${classes.SideDrawer} ${classes.SideDrawer_Hidden}`
       }
