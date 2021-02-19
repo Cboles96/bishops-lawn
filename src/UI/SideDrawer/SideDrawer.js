@@ -5,7 +5,6 @@ import NavigationItem from "../../components/Navigation/NavigationItem/Navigatio
 import classes from "../SideDrawer/SideDrawer.module.css";
 
 const SideDrawer = (props) => {
-
   return (
     <div
       className={

@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import NavigationItems from '../src/components/Navigation/NavigationItems';
-import Footer from '../src/components/Footer/Footer';
+import NavigationItems from "../src/components/Navigation/NavigationItems";
+import Footer from "../src/components/Footer/Footer";
 import Layout from "./hoc/Layout/Layout";
 import Homepage from "./pages/Homepage/Homepage";
-import Services from './pages/Services/Services';
-import Gallery from './pages/Gallery/Gallery';
+import Services from "./pages/Services/Services";
+import Gallery from "./pages/Gallery/Gallery";
 
 import "./App.css";
 
@@ -15,7 +15,7 @@ function App() {
 
   routes = (
     <Switch>
-      <Route path="/bishops-lawn" component={Homepage} />
+      <Route path="/home" component={Homepage} />
       <Route path="/services" component={Services} />
       <Route path="/gallery" component={Gallery} />
     </Switch>

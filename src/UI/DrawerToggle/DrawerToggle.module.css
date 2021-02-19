@@ -1,0 +1,30 @@
+.DrawerToggle {
+  display: none;
+  position: fixed;
+  top: 15%;
+  left: 0%;
+  z-index: 500;
+}
+
+.Menu_Button {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.Menu_Button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 787px) {
+  .DrawerToggle {
+    display: block;
+  }
+
+  .DrawerToggle img {
+    width: 50px;
+  }
+
+  .NavigationItems {
+    display: none;
+  }
+}

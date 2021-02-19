@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Aux from "../../hoc/Aux";
 import NavigationItem from "./NavigationItem/NavigationItem";
 import Backdrop from "../../UI/Backdrop/Backdrop";
+import DrawerToggle from "../../UI/DrawerToggle/DrawerToggle";
 import SideDrawer from "../../UI/SideDrawer/SideDrawer";
 
 import Logo from "../../assets/images/icons/logo2.png";
-import Menu from "../../assets/images/icons/menu.png";
 import FacebookLink from "../../assets/images/icons/social-media/facebook.png";
 import InstagramLink from "../../assets/images/icons/social-media/instagram.png";
 
@@ -19,6 +19,7 @@ const NavigationItems = () => {
   const menuBtnClickedHandler = () => {
     showBackdrop(true);
     showSideDrawer(true);
+    console.log(sidedrawer);
   };
 
   const backdropClickedHandler = () => {
@@ -33,16 +34,9 @@ const NavigationItems = () => {
         clicked={backdropClickedHandler}
       ></Backdrop>
       <header className={classes.Header}>
-        <div className={classes.DrawerToggle}>
-          <img
-            className={classes.Menu}
-            src={Menu}
-            alt="Menu"
-            onClick={menuBtnClickedHandler}
-          ></img>
-        </div>
-        <SideDrawer sidedrawerState={sidedrawer}></SideDrawer>
-        <div className={classes.Left_Header}>
+        <DrawerToggle clicked={menuBtnClickedHandler} />
+        <SideDrawer backdropState={backdrop} sidedrawerState={sidedrawer}></SideDrawer>
+        <div className={classes.Top_Header}>
           <a
             className={classes.InstagramLink}
             href="/"
@@ -51,7 +45,7 @@ const NavigationItems = () => {
           >
             <img src={InstagramLink} alt="Instagram Link"></img>
           </a>
-          <NavigationItem link="/bishops-lawn">
+          <NavigationItem link="/home">
             <img className={classes.Logo} src={Logo} alt="Logo"></img>
           </NavigationItem>
           <a

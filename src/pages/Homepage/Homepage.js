@@ -29,7 +29,7 @@ class Homepage extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    const loggedIn = true;
+    const loggedIn = false;
     if (loggedIn) {
       setTimeout(() => {
         this.setState({
@@ -113,7 +113,7 @@ class Homepage extends Component {
           emailChanged={emailChangedHandler}
           passwordChanged={passwordChangedHandler}
         />
-        <Jumbo></Jumbo>
+        <Jumbo />
         <div className={classes.Preview_Grid}>
           <PreviewButton
             mouseover={servicesMouseOverHandler}
@@ -128,9 +128,9 @@ class Homepage extends Component {
           <PreviewButton mouseover={storeMouseOverHandler} storeState={this.state.storeActive} tag={storeTag} />
         </div>
 
-        {this.props.ser ? <Services /> : null}
+        {this.props.ser ? <Services servicesState={this.state.servicesActive} /> : null}
 
-        {this.props.test ? <Testimonial /> : null}
+        {this.props.test ? <Testimonial testimonialState={this.state.testimonialActive} /> : null}
 
         {this.props.st ? <Store /> : null}
       </Aux>

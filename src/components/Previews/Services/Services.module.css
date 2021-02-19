@@ -1,4 +1,10 @@
-.Services_Container {
+.Services_Container_Active {
+  height: 800px;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  opacity: 0.9;
+}
+
+.Services_Container_Inactive {
   height: 800px;
   background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
 }
