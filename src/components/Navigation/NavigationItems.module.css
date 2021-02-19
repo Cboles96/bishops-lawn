@@ -1,12 +1,12 @@
 .Header {
   width: 100%;
-  height: 220px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 100;
-  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  background-image: linear-gradient(darkblue, rgb(8, 185, 255) 90%);
 }
 
 .DrawerToggle {
@@ -55,12 +55,22 @@
   opacity: 0.5;
 }
 
+.Notice {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(8, 185, 255);
+}
+
+.Notice h1 {
+  margin: 0;
+}
+
 @media (max-width: 787px) {
   .Header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
+    height: 150px;
   }
 
   .Top_Header {
@@ -68,7 +78,7 @@
   }
 
   .Logo {
-    width: 80px;
+    width: 100px;
   }
 
   .InstagramLink img {

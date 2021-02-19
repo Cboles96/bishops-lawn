@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  background-image: linear-gradient(darkblue, rgb(8, 185, 255), rgb(13, 104, 13));
   position: fixed;  
   top: 0%;
   left: 25%;
