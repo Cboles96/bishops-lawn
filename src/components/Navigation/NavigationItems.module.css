@@ -1,6 +1,6 @@
 .Header {
   width: 100%;
-  height: 300px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .Logo {
-  width: 120px;
+  width: 150px;
 }
 
 .Logo:hover {
@@ -70,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
+    height: 100px;
   }
 
   .Top_Header {
@@ -82,19 +82,11 @@
   }
 
   .InstagramLink img {
-    width: 35px;
+    display: none;
   }
   
   .FacebookLink img {
-    width: 25px;
-  }
-
-  .DrawerToggle {
-    display: block;
-  }
-
-  .DrawerToggle img {
-    width: 50px;
+    display: none;
   }
 
   .NavigationItems {

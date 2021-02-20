@@ -18,6 +18,7 @@
 @media (max-width: 787px) {
   .DrawerToggle {
     display: block;
+    top: 5%;
   }
 
   .DrawerToggle img {

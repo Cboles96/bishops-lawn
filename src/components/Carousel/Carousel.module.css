@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: left 0.3s ease-in, right 0.3s ease-in;
+  transition: left 0.4s ease-in, right 0.3s ease-in;
 }
 
 .Slide_Two_Hidden,
@@ -157,7 +157,7 @@
   .Slide_Three_Image,
   .Slide_Four_Image,
   .Slide_Five_Image {
-    width: 300px;
+    width: 350px;
     height: 250px
   }
 }

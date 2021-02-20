@@ -1,11 +1,12 @@
 .Background {
-  height: 750px;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url("../../assets/images/background/grass2.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(8, 185, 255);
   position: relative;
 }
 
@@ -16,37 +17,52 @@
   color: white;
   text-align: center;
   width: 70%;
+  top: 35%;
+  left: 15%;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1410px) {
   .Background {
-    height: 500px;
+    height: 650px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .Background {
-    height: 400px;
+    height: 550px;
+  }
+
+  .Background h1 {
+    top: 30%;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .Background {
+    height: 450px;
+  }
+
   .Background h1 {
     font-size: 2.5rem;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .Background {
-    height: 200px;
+    height: 350px;
   }
 
   .Background h1 {
+    top: 20%;
     font-size: 2rem;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
+  .Background {
+    height: 250px;
+  }
+
   .Background h1 {
     font-size: 1.5rem;
   }

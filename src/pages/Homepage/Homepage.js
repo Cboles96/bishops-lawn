@@ -25,6 +25,8 @@ class Homepage extends Component {
       email: "",
       password: "",
     },
+    johnClicked: false,
+    mackenzieClicked: false,
   };
 
   componentDidMount() {
@@ -100,6 +102,14 @@ class Homepage extends Component {
       this.setState({ password: event.target.value });
     };
 
+    const johnClickedHandler = () => {
+      this.setState({ johnClicked: true });
+    };
+
+    const mackenzieClickedHandler = () => {
+      this.setState({ mackenzieClicked: true });
+    };
+
     return (
       <Aux>
         <Backdrop
@@ -125,12 +135,24 @@ class Homepage extends Component {
             testimonialState={this.state.testimonialActive}
             tag={testimonialTag}
           />
-          <PreviewButton mouseover={storeMouseOverHandler} storeState={this.state.storeActive} tag={storeTag} />
+          <PreviewButton
+            mouseover={storeMouseOverHandler}
+            storeState={this.state.storeActive}
+            tag={storeTag}
+          />
         </div>
 
-        {this.props.ser ? <Services servicesState={this.state.servicesActive} /> : null}
+        {this.props.ser ? (
+          <Services servicesState={this.state.servicesActive} />
+        ) : null}
 
-        {this.props.test ? <Testimonial testimonialState={this.state.testimonialActive} /> : null}
+        {this.props.test ? (
+          <Testimonial
+            testimonialState={this.state.testimonialActive}
+            johnClicked={johnClickedHandler}
+            mackenzieClicked={mackenzieClickedHandler}
+          />
+        ) : null}
 
         {this.props.st ? <Store /> : null}
       </Aux>

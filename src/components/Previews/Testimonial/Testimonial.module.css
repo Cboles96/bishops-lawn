@@ -46,14 +46,22 @@
   text-align: left;
 }
 
-.Name_Image {
+.Testimonial_John_Image,
+.Testimonial_Mackenzie_Image {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.Name_Image h1 {
+.Testimonial_John_Image img,
+.Testimonial_Mackenzie_Image img {
+  width: 300px;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.Testimonial_John_Image h1,
+.Testimonial_Mackenzie_Image h1 {
   font-family: "Dancing Script", sans-serif;
   font-size: 3rem;
   color: white;
@@ -61,67 +69,69 @@
   order: 1;
 }
 
-.Name_Image img {
-  max-width: 20rem;
-  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
-}
-
 @media (max-width: 1257px) {
-  .Testimonial_Wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .Testimonial_John,
-  .Testimonial_Mackenzie {
-    width: 100%;
-    height: 750px;
-  }
-
-  .Testimonial_Mackenzie {
-    background-image: none;
-    background-color: rgb(13, 104, 13);
-  }
-}
-
-@media (max-width: 637px) {
-  .Testimonial_Hover,
-  .Testimonial_Hover h2 {
-    font-size: 1.5rem;
-    width: 100px;
-    margin: auto;
-    padding: 0;
-  }
-
-  .Testimonial_Wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
   .Testimonial_John,
   .Testimonial_Mackenzie {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 700px;
+    height: 1000px;
+  }
+
+  .Testimonial_John_Image h1,
+  .Testimonial_Mackenzie_Image h1 {
+    font-size: 2.5rem;
+  }
+
+  .Testimonial_John p {
+    order: 1;
   }
 
   .Testimonial_John p,
   .Testimonial_Mackenzie p {
-    font-size: 1rem;
-    margin: 15px 20px;
-    order: 3;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.2rem;
     text-align: center;
   }
 
-  .Name_Image img {
-    height: 20rem;
+  .Testimonial_John_Image,
+  .Testimonial_Mackenzie_Image {
+    padding-top: 100px;
+  }
+
+  .Testimonial_John_Image img,
+  .Testimonial_Mackenzie_Image img {
+    width: 250px;
+  }
+
+  .Testimonial_Mackenzie {
+    background-image: none;
+    background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  }
+}
+
+@media (max-width: 637px) {
+  .Testimonial_John,
+  .Testimonial_Mackenzie {
+    display: flex;
+    min-width: 50%;
+    height: 500px;
+  }
+
+  .Testimonial_John_Image h1,
+  .Testimonial_Mackenzie_Image h1 {
+    font-size: 2rem;
+  }
+
+  .Testimonial_John p,
+  .Testimonial_Mackenzie p {
+    display: none;
+  }
+
+  .Testimonial_John_Image img,
+  .Testimonial_Mackenzie img {
+    width: 150px;
   }
 
   .Name_Image h1 {
