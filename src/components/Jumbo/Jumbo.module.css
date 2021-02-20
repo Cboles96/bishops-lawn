@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/images/background/grass2.png");
+  /* background-image: url("../../assets/images/background/grass2.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(8, 185, 255);
+  background-size: cover; */
+  background-color: transparent;
   position: relative;
 }
 

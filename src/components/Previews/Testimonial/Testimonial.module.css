@@ -12,6 +12,7 @@
   height: 800px;
   margin: auto;
   background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  opacity: 0.9;
 }
 
 .Testimonial_Mackenzie {
@@ -22,6 +23,7 @@
   height: 800px;
   margin: 0;
   background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  opacity: 0.9;
 }
 
 .Testimonial_John p {
@@ -95,11 +97,6 @@
     text-align: center;
   }
 
-  .Testimonial_John_Image,
-  .Testimonial_Mackenzie_Image {
-    padding-top: 100px;
-  }
-
   .Testimonial_John_Image img,
   .Testimonial_Mackenzie_Image img {
     width: 250px;
@@ -114,7 +111,6 @@
 @media (max-width: 637px) {
   .Testimonial_John,
   .Testimonial_Mackenzie {
-    display: flex;
     min-width: 50%;
     height: 500px;
   }

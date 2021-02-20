@@ -17,7 +17,7 @@ import gallerySeven from "../../assets/images/gallery-temp/gallery-7-temp.jpg";
 import galleryEight from "../../assets/images/gallery-temp/gallery-8-temp.jpg";
 import galleryNine from "../../assets/images/gallery-temp/gallery-9-temp.jpg";
 import galleryTen from "../../assets/images/gallery-temp/gallery-10-temp.jpg";
-import photos from '../../assets/images/icons/photos.png';
+import photograph from '../../assets/images/icons/photos.png';
 
 class Gallery extends Component {
   state = {
@@ -43,9 +43,9 @@ class Gallery extends Component {
     return (
       <Aux>
         <section className={classes.Welcome}>
-          <img src={photos} alt="Photos"></img>
+          <img className={classes.Photograph_Left} src={photograph} alt="Photos"></img>
           <h1>Welcome to our Gallery!</h1>
-          <img src={photos} alt="Photos"></img>
+          <img className={classes.Photograph_Right} src={photograph} alt="Photos"></img>
         </section>
         <Carousel />
         <Backdrop

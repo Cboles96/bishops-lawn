@@ -12,6 +12,7 @@
   z-index: 1000;
   transform: translateX(-45%);
   transition: transform 300ms ease-out;
+  opacity: 0.9;
 }
 
 .SideDrawer_Hidden {

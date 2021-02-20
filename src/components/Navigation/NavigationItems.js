@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Aux from "../../hoc/Aux";
 import NavigationItem from "./NavigationItem/NavigationItem";
-import Backdrop from "../../UI/Backdrop/Backdrop";
-import DrawerToggle from "../../UI/DrawerToggle/DrawerToggle";
-import SideDrawer from "../../UI/SideDrawer/SideDrawer";
 
 import Logo from "../../assets/images/icons/logo2.png";
 import FacebookLink from "../../assets/images/icons/social-media/facebook.png";
@@ -13,29 +10,10 @@ import InstagramLink from "../../assets/images/icons/social-media/instagram.png"
 import classes from "../Navigation/NavigationItems.module.css";
 
 const NavigationItems = () => {
-  const [backdrop, showBackdrop] = useState(false);
-  const [sidedrawer, showSideDrawer] = useState(false);
-
-  const menuBtnClickedHandler = () => {
-    showBackdrop(true);
-    showSideDrawer(true);
-    console.log(sidedrawer);
-  };
-
-  const backdropClickedHandler = () => {
-    showBackdrop(false);
-    showSideDrawer(false);
-  };
 
   return (
     <Aux>
-      <Backdrop
-        backdropState={backdrop}
-        clicked={backdropClickedHandler}
-      ></Backdrop>
       <header className={classes.Header}>
-        <DrawerToggle clicked={menuBtnClickedHandler} />
-        <SideDrawer backdropState={backdrop} sidedrawerState={sidedrawer}></SideDrawer>
         <div className={classes.Top_Header}>
           <a
             className={classes.InstagramLink}

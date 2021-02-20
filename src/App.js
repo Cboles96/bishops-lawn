@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import NavigationItems from "../src/components/Navigation/NavigationItems";
@@ -7,11 +7,29 @@ import Layout from "./hoc/Layout/Layout";
 import Homepage from "./pages/Homepage/Homepage";
 import Services from "./pages/Services/Services";
 import Gallery from "./pages/Gallery/Gallery";
+import Backdrop from "../src/UI/Backdrop/Backdrop";
+
+import DrawerToggle from "../src/UI/DrawerToggle/DrawerToggle";
+
+import SideDrawer from "../src/UI/SideDrawer/SideDrawer";
 
 import "./App.css";
 
 function App() {
   let routes = null;
+  const [backdrop, showBackdrop] = useState(false);
+  const [sidedrawer, showSideDrawer] = useState(false);
+
+  const menuBtnClickedHandler = () => {
+    showSideDrawer(true);
+    showBackdrop(true);
+    console.log(sidedrawer);
+  };
+
+  const backdropClickedHandler = () => {
+    showSideDrawer(false);
+    showBackdrop(false);
+  };
 
   routes = (
     <Switch>
@@ -23,6 +41,12 @@ function App() {
 
   return (
     <Layout>
+      <Backdrop
+        backdropState={backdrop}
+        clicked={backdropClickedHandler}
+      ></Backdrop>
+      <DrawerToggle clicked={menuBtnClickedHandler} />
+      <SideDrawer sidedrawerState={sidedrawer}></SideDrawer>
       <NavigationItems />
       {routes}
       <Footer />
