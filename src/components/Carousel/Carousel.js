@@ -60,8 +60,10 @@ const Carousel = () => {
       case "galleryFour":
         return classes.Slide_Four_Image;
       case "galleryFive":
+        console.log('galleryfive');
         return classes.Slide_Five_Image;
       case "gallerySix":
+        console.log('gallerysix');
         return classes.Slide_Six_Image;
       case "gallerySeven":
         return classes.Slide_Seven_Image;
@@ -193,6 +195,7 @@ const Carousel = () => {
   const nextImageFiveClickedHandler = () => {
     changeCurrentSlide("Slide Six");
     changeCurrentImage(gallerySix);
+    changeCurrentImageClass('gallerySix');
     changeCurrentBackBtn("Slide Six Back");
     changeCurrentNextBtn("Slide Six Next");
   };
@@ -208,6 +211,7 @@ const Carousel = () => {
   const nextImageSixClickedHandler = () => {
     changeCurrentSlide("Slide Seven");
     changeCurrentImage(gallerySeven);
+    changeCurrentImageClass('gallerySeven');
     changeCurrentBackBtn("Slide Seven Back");
     changeCurrentNextBtn("Slide Seven Next");
   };
@@ -223,6 +227,7 @@ const Carousel = () => {
   const nextImageSevenClickedHandler = () => {
     changeCurrentSlide("Slide Eight");
     changeCurrentImage(galleryEight);
+    changeCurrentImageClass('galleryEight');
     changeCurrentBackBtn("Slide Eight Back");
     changeCurrentNextBtn("Slide Eight Next");
   };
@@ -238,6 +243,7 @@ const Carousel = () => {
   const nextImageEightClickedHandler = () => {
     changeCurrentSlide("Slide Nine");
     changeCurrentImage(galleryNine);
+    changeCurrentImageClass('galleryNine');
     changeCurrentBackBtn("Slide Nine Back");
     changeCurrentNextBtn("Slide Nine Next");
   };
@@ -253,6 +259,7 @@ const Carousel = () => {
   const nextImageNineClickedHandler = () => {
     changeCurrentSlide("Slide Ten");
     changeCurrentImage(galleryTen);
+    changeCurrentImageClass("galleryTen");
     changeCurrentBackBtn("Slide Ten Back");
     changeCurrentNextBtn("Slide Ten Next");
   };
