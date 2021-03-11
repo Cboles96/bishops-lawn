@@ -1,0 +1,43 @@
+.Back_Button {
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.Next_Button {
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.Slide_One_Unavailable {
+  opacity: 0.5;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.Last_Slide_Unavailable {
+  opacity: 0.5;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.Back_Button:hover,
+.Next_Button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 991px) {
+
+  .Back_Button,
+  .Slide_One_Unavailable,
+  .Last_Slide_Unavailable {
+    order: 1;
+    margin: 12px 0;
+    padding: 0 5px;
+  }
+
+  .Next_Button {
+    order: 3;
+    margin: 12px 0;
+    padding: 0 5px;
+  }
+}

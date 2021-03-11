@@ -1,240 +1,284 @@
 import React, { useState } from "react";
 
-import classes from "../Carousel/Carousel.module.css";
+import ImageContainer from "../Carousel/ImageContainer/ImageContainer";
 
-import unavailable from "../../assets/images/icons/controls/officexs/cancel.png";
-import back from "../../assets/images/icons/controls/officexs/back.png";
-import next from "../../assets/images/icons/controls/officexs/next.png";
+import classes from "../Carousel/Carousel.module.css";
 
 import galleryOne from "../../assets/images/gallery-temp/gallery-1-temp.jpg";
 import galleryTwo from "../../assets/images/gallery-temp/gallery-2-temp.jpg";
 import galleryThree from "../../assets/images/gallery-temp/gallery-3-temp.png";
 import galleryFour from "../../assets/images/gallery-temp/gallery-4-temp.jpg";
 import galleryFive from "../../assets/images/gallery-temp/gallery-5-temp.jpg";
+import gallerySix from "../../assets/images/gallery-temp/gallery-6-temp.jpg";
+import gallerySeven from "../../assets/images/gallery-temp/gallery-7-temp.jpg";
+import galleryEight from "../../assets/images/gallery-temp/gallery-8-temp.jpg";
+import galleryNine from "../../assets/images/gallery-temp/gallery-9-temp.jpg";
+import galleryTen from "../../assets/images/gallery-temp/gallery-10-temp.jpg";
 
 const Carousel = () => {
-  const [showImageOne, setShowImageOne] = useState(true);
-  const [showImageTwo, setShowImageTwo] = useState(false);
-  const [showImageThree, setShowImageThree] = useState(false);
-  const [showImageFour, setShowImageFour] = useState(false);
-  const [showImageFive, setShowImageFive] = useState(false);
+  const [currentSlide, changeCurrentSlide] = useState("Slide One");
+  const [currentImage, changeCurrentImage] = useState(galleryOne);
+  const [currentImageClass, changeCurrentImageClass] = useState("galleryOne");
+  const [currentBackBtn, changeCurrentBackBtn] = useState("Slide Two Back");
+  const [currentNextBtn, changeCurrentNextBtn] = useState("Slide One Next");
 
-  const [slideLeftOne, setSlideLeftOne] = useState(false);
-  const [slideRightOne, setSlideRightOne] = useState(false);
+  const changeSlide = () => {
+    switch (currentSlide) {
+      case "Slide One":
+        return classes.Slide_One;
+      case "Slide Two":
+        return classes.Slide_Two;
+      case "Slide Three":
+        return classes.Slide_Three;
+      case "Slide Four":
+        return classes.Slide_Four;
+      case "Slide Five":
+        return classes.Slide_Five;
+      case "Slide Six":
+        return classes.Slide_Six;
+      case "Slide Seven":
+        return classes.Slide_Seven;
+      case "Slide Eight":
+        return classes.Slide_Eight;
+      case "Slide Nine":
+        return classes.Slide_Nine;
+      case "Slide Ten":
+        return classes.Slide_Ten;
+      default:
+        return null;
+    }
+  };
 
-  const [slideLeftTwo, setSlideLeftTwo] = useState(false);
-  const [slideRightTwo, setSlideRightTwo] = useState(false);
+  const changeImageClass = () => {
+    switch (currentImageClass) {
+      case "galleryOne":
+        return classes.Slide_One_Image;
+      case "galleryTwo":
+        return classes.Slide_Two_Image;
+      case "galleryThree":
+        return classes.Slide_Three_Image;
+      case "galleryFour":
+        return classes.Slide_Four_Image;
+      case "galleryFive":
+        return classes.Slide_Five_Image;
+      case "gallerySix":
+        return classes.Slide_Six_Image;
+      case "gallerySeven":
+        return classes.Slide_Seven_Image;
+      case "galleryEight":
+        return classes.Slide_Eight_Image;
+      case "galleryNine":
+        return classes.Slide_Nine_Image;
+      case "galleryTen":
+        return classes.Slide_Ten_Image;
+      default:
+        return null;
+    }
+  };
 
-  const [slideLeftThree, setSlideLeftThree] = useState(false);
-  const [slideRightThree, setSlideRightThree] = useState(false);
+  const changeBackClicked = () => {
+    switch (currentBackBtn) {
+      case "Slide Two Back":
+        return backImageTwoClickedHandler();
+      case "Slide Three Back":
+        return backImageThreeClickedHandler();
+      case "Slide Four Back":
+        return backImageFourClickedHandler();
+      case "Slide Five Back":
+        return backImageFiveClickedHandler();
+      case "Slide Six Back":
+        return backImageSixClickedHandler();
+      case "Slide Seven Back":
+        return backImageSevenClickedHandler();
+      case "Slide Eight Back":
+        return backImageEightClickedHandler();
+      case "Slide Nine Back":
+        return backImageNineClickedHandler();
+      case "Slide Ten Back":
+        return backImageTenClickedHandler();
+      default:
+        return null;
+    }
+  };
 
-  const [slideLeftFour, setSlideLeftFour] = useState(false);
-  const [slideRightFour, setSlideRightFour] = useState(false);
-
-  const [slideLeftFive, setSlideLeftFive] = useState(false);
-  const [slideRightFive, setSlideRightFive] = useState(false);
+  const changeNextClicked = () => {
+    switch (currentNextBtn) {
+      case "Slide One Next":
+        return nextImageOneClickedHandler();
+      case "Slide Two Next":
+        return nextImageTwoClickedHandler();
+      case "Slide Three Next":
+        return nextImageThreeClickedHandler();
+      case "Slide Four Next":
+        return nextImageFourClickedHandler();
+      case "Slide Five Next":
+        return nextImageFiveClickedHandler();
+      case "Slide Six Next":
+        return nextImageSixClickedHandler();
+      case "Slide Seven Next":
+        return nextImageSevenClickedHandler();
+      case "Slide Eight Next":
+        return nextImageEightClickedHandler();
+      case "Slide Nine Next":
+        return nextImageNineClickedHandler();
+      default:
+        return null;
+    }
+  };
 
   const nextImageOneClickedHandler = () => {
-    setShowImageOne(false);
-    setShowImageTwo(true);
-    setSlideLeftOne(true);
-    setSlideRightOne(false);
+    changeCurrentSlide("Slide Two");
+    changeCurrentImage(galleryTwo);
+    changeCurrentImageClass("galleryTwo");
+    changeCurrentBackBtn("Slide Two Back");
+    changeCurrentNextBtn("Slide Two Next");
   };
 
   const backImageTwoClickedHandler = () => {
-    setShowImageTwo(false);
-    setShowImageOne(true);
-    setSlideLeftTwo(false);
-    setSlideRightTwo(true);
+    changeCurrentSlide("Slide One");
+    changeCurrentImage(galleryOne);
+    changeCurrentImageClass("galleryOne");
+    changeCurrentBackBtn("Slide One Back");
+    changeCurrentNextBtn("Slide One Next");
   };
 
   const nextImageTwoClickedHandler = () => {
-    setShowImageTwo(false);
-    setShowImageThree(true);
-    setSlideLeftTwo(true);
-    setSlideRightTwo(false);
+    changeCurrentSlide("Slide Three");
+    changeCurrentImage(galleryThree);
+    changeCurrentImageClass("galleryThree");
+    changeCurrentBackBtn("Slide Three Back");
+    changeCurrentNextBtn("Slide Three Next");
   };
 
   const backImageThreeClickedHandler = () => {
-    setShowImageThree(false);
-    setShowImageTwo(true);
-    setSlideLeftThree(false);
-    setSlideRightThree(true);
+    changeCurrentSlide("Slide Two");
+    changeCurrentImage(galleryTwo);
+    changeCurrentImageClass("galleryTwo");
+    changeCurrentBackBtn("Slide Two Back");
+    changeCurrentNextBtn("Slide Two Next");
   };
 
   const nextImageThreeClickedHandler = () => {
-    setShowImageThree(false);
-    setShowImageFour(true);
-    setSlideLeftThree(true);
-    setSlideRightThree(false);
+    changeCurrentSlide("Slide Four");
+    changeCurrentImage(galleryFour);
+    changeCurrentImageClass("galleryFour");
+    changeCurrentBackBtn("Slide Four Back");
+    changeCurrentNextBtn("Slide Four Next");
   };
 
   const backImageFourClickedHandler = () => {
-    setShowImageFour(false);
-    setShowImageThree(true);
-    setSlideLeftFour(false);
-    setSlideRightFour(true);
+    changeCurrentSlide("Slide Three");
+    changeCurrentImage(galleryThree);
+    changeCurrentImageClass("galleryThree");
+    changeCurrentBackBtn("Slide Three Back");
+    changeCurrentNextBtn("Slide Three Next");
   };
 
   const nextImageFourClickedHandler = () => {
-    setShowImageFour(false);
-    setShowImageFive(true);
-    setSlideLeftFour(true);
-    setSlideRightFour(false);
+    changeCurrentSlide("Slide Five");
+    changeCurrentImage(galleryFive);
+    changeCurrentImageClass("galleryFive");
+    changeCurrentBackBtn("Slide Five Back");
+    changeCurrentNextBtn("Slide Five Next");
   };
 
   const backImageFiveClickedHandler = () => {
-    setShowImageFive(false);
-    setShowImageFour(true);
-    setSlideLeftFive(false);
-    setSlideRightFive(true);
+    changeCurrentSlide("Slide Four");
+    changeCurrentImage(galleryFour);
+    changeCurrentImageClass("galleryFour");
+    changeCurrentBackBtn("Slide Four Back");
+    changeCurrentNextBtn("Slide Four Next");
+  };
+
+  const nextImageFiveClickedHandler = () => {
+    changeCurrentSlide("Slide Six");
+    changeCurrentImage(gallerySix);
+    changeCurrentBackBtn("Slide Six Back");
+    changeCurrentNextBtn("Slide Six Next");
+  };
+
+  const backImageSixClickedHandler = () => {
+    changeCurrentSlide("Slide Five");
+    changeCurrentImage(galleryFive);
+    changeCurrentImageClass("galleryFive");
+    changeCurrentBackBtn("Slide Five Back");
+    changeCurrentNextBtn("Slide Five Next");
+  };
+
+  const nextImageSixClickedHandler = () => {
+    changeCurrentSlide("Slide Seven");
+    changeCurrentImage(gallerySeven);
+    changeCurrentBackBtn("Slide Seven Back");
+    changeCurrentNextBtn("Slide Seven Next");
+  };
+
+  const backImageSevenClickedHandler = () => {
+    changeCurrentSlide("Slide Six");
+    changeCurrentImage(gallerySix);
+    changeCurrentImageClass("gallerySix");
+    changeCurrentBackBtn("Slide Six Back");
+    changeCurrentNextBtn("Slide Six Next");
+  };
+
+  const nextImageSevenClickedHandler = () => {
+    changeCurrentSlide("Slide Eight");
+    changeCurrentImage(galleryEight);
+    changeCurrentBackBtn("Slide Eight Back");
+    changeCurrentNextBtn("Slide Eight Next");
+  };
+
+  const backImageEightClickedHandler = () => {
+    changeCurrentSlide("Slide Seven");
+    changeCurrentImage(gallerySeven);
+    changeCurrentImageClass("gallerySeven");
+    changeCurrentBackBtn("Slide Seven Back");
+    changeCurrentNextBtn("Slide Seven Next");
+  };
+
+  const nextImageEightClickedHandler = () => {
+    changeCurrentSlide("Slide Nine");
+    changeCurrentImage(galleryNine);
+    changeCurrentBackBtn("Slide Nine Back");
+    changeCurrentNextBtn("Slide Nine Next");
+  };
+
+  const backImageNineClickedHandler = () => {
+    changeCurrentSlide("Slide Eight");
+    changeCurrentImage(galleryEight);
+    changeCurrentImageClass("galleryEight");
+    changeCurrentBackBtn("Slide Eight Back");
+    changeCurrentNextBtn("Slide Eight Next");
+  };
+
+  const nextImageNineClickedHandler = () => {
+    changeCurrentSlide("Slide Ten");
+    changeCurrentImage(galleryTen);
+    changeCurrentBackBtn("Slide Ten Back");
+    changeCurrentNextBtn("Slide Ten Next");
+  };
+
+  const backImageTenClickedHandler = () => {
+    changeCurrentSlide("Slide Nine");
+    changeCurrentImage(galleryNine);
+    changeCurrentImageClass("galleryNine");
+    changeCurrentBackBtn("Slide Nine Back");
+    changeCurrentNextBtn("Slide Nine Next");
   };
 
   return (
     <div className={classes.Carousel}>
-      <div
-        className={
-          showImageOne
-            ? classes.Slide_One
-            : !showImageOne && slideRightOne
-            ? `${classes.Slide_One} ${classes.Slide_One_Right}`
-            : !showImageOne && slideLeftOne
-            ? `${classes.Slide_One} ${classes.Slide_One_Left}`
-            : null
-        }
-      >
-        <img
-          className={classes.Slide_One_Unavailable}
-          src={unavailable}
-          alt=""
-        ></img>
-        <img className={classes.Slide_One_Image} src={galleryOne} alt=""></img>
-        <img
-          className={classes.Next_Button}
-          src={next}
-          alt=""
-          onClick={nextImageOneClickedHandler}
-        ></img>
-      </div>
-      <div
-        className={
-          !showImageTwo && !slideLeftTwo && !slideRightTwo
-            ? classes.Slide_Two_Hidden
-            : !showImageTwo && slideRightTwo
-            ? `${classes.Slide_Two} ${classes.Slide_Two_Right}`
-            : !showImageTwo && slideLeftTwo
-            ? `${classes.Slide_Two} ${classes.Slide_Two_Left}`
-            : showImageTwo
-            ? classes.Slide_Two
-            : null
-        }
-      >
-        <img
-          className={classes.Back_Button}
-          src={back}
-          alt=""
-          onClick={backImageTwoClickedHandler}
-        ></img>
-        <img className={classes.Slide_Two_Image} src={galleryTwo} alt=""></img>
-        <img
-          className={classes.Next_Button}
-          src={next}
-          alt=""
-          onClick={nextImageTwoClickedHandler}
-        ></img>
-      </div>
-      <div
-        className={
-          !showImageThree && !slideLeftThree && !slideRightThree
-            ? classes.Slide_Three_Hidden
-            : !showImageThree && slideRightThree
-            ? `${classes.Slide_Three} ${classes.Slide_Three_Right}`
-            : !showImageThree && slideLeftThree
-            ? `${classes.Slide_Three} ${classes.Slide_Three_Left}`
-            : showImageThree
-            ? classes.Slide_Three
-            : null
-        }
-      >
-        <img
-          className={classes.Back_Button}
-          src={back}
-          alt=""
-          onClick={backImageThreeClickedHandler}
-        ></img>
-        <img
-          className={classes.Slide_Three_Image}
-          src={galleryThree}
-          alt=""
-        ></img>
-        <img
-          className={classes.Next_Button}
-          src={next}
-          alt=""
-          onClick={nextImageThreeClickedHandler}
-        ></img>
-      </div>
-      <div
-        className={
-          !showImageFour && !slideLeftFour && !slideRightFour
-            ? classes.Slide_Four_Hidden
-            : !showImageFour && slideRightFour
-            ? `${classes.Slide_Four} ${classes.Slide_Four_Right}`
-            : !showImageFour && slideLeftFour
-            ? `${classes.Slide_Four} ${classes.Slide_Four_Left}`
-            : showImageFour
-            ? classes.Slide_Four
-            : null
-        }
-      >
-        <img
-          className={classes.Back_Button}
-          src={back}
-          alt=""
-          onClick={backImageFourClickedHandler}
-        ></img>
-        <img
-          className={classes.Slide_Four_Image}
-          src={galleryFour}
-          alt=""
-        ></img>
-        <img
-          className={classes.Next_Button}
-          src={next}
-          alt=""
-          onClick={nextImageFourClickedHandler}
-        ></img>
-      </div>
-      <div
-        className={
-          !showImageFive && !slideLeftFive && !slideRightFive
-            ? classes.Slide_Five_Hidden
-            : !showImageFive && slideRightFour
-            ? `${classes.Slide_Five} ${classes.Slide_Five_Right}`
-            : !showImageFive && slideRightFive
-            ? `${classes.Slide_Five} ${classes.Slide_Five_Right}`
-            : showImageFive
-            ? classes.Slide_Five
-            : null
-        }
-      >
-        <img
-          className={classes.Back_Button}
-          src={back}
-          alt=""
-          onClick={backImageFiveClickedHandler}
-        ></img>
-        <img
-          className={classes.Slide_Five_Image}
-          src={galleryFive}
-          alt=""
-        ></img>
-        <img
-          className={classes.Slide_Five_Unavailable}
-          src={unavailable}
-          alt=""
-        ></img>
-      </div>
+      <ImageContainer
+        currentSlide={currentSlide}
+        currentImage={currentImage}
+        changeSlide={changeSlide()}
+        changeClass={changeImageClass()}
+        changeBackClicked={() => {
+          changeBackClicked();
+        }}
+        changeNextClicked={() => {
+          changeNextClicked();
+        }}
+      />
     </div>
   );
 };
