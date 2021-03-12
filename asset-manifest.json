@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bishops-lawn/static/css/main.edbb06d5.chunk.css",
+    "main.css": "/bishops-lawn/static/css/main.6c4ed2d9.chunk.css",
     "main.js": "/bishops-lawn/static/js/main.a5262d3f.chunk.js",
     "main.js.map": "/bishops-lawn/static/js/main.a5262d3f.chunk.js.map",
     "runtime-main.js": "/bishops-lawn/static/js/runtime-main.27cc4f41.js",
@@ -8,9 +8,9 @@
     "static/js/2.171fb0a7.chunk.js": "/bishops-lawn/static/js/2.171fb0a7.chunk.js",
     "static/js/2.171fb0a7.chunk.js.map": "/bishops-lawn/static/js/2.171fb0a7.chunk.js.map",
     "index.html": "/bishops-lawn/index.html",
-    "precache-manifest.1c26bedf02742d158f8e0da97ef0afc5.js": "/bishops-lawn/precache-manifest.1c26bedf02742d158f8e0da97ef0afc5.js",
+    "precache-manifest.48d85404f9e4b2b09af7feb61729d825.js": "/bishops-lawn/precache-manifest.48d85404f9e4b2b09af7feb61729d825.js",
     "service-worker.js": "/bishops-lawn/service-worker.js",
-    "static/css/main.edbb06d5.chunk.css.map": "/bishops-lawn/static/css/main.edbb06d5.chunk.css.map",
+    "static/css/main.6c4ed2d9.chunk.css.map": "/bishops-lawn/static/css/main.6c4ed2d9.chunk.css.map",
     "static/js/2.171fb0a7.chunk.js.LICENSE.txt": "/bishops-lawn/static/js/2.171fb0a7.chunk.js.LICENSE.txt",
     "static/media/cap-white-front-logo.png": "/bishops-lawn/static/media/cap-white-front-logo.4f007b02.png",
     "static/media/dropdown-arrow.jpeg": "/bishops-lawn/static/media/dropdown-arrow.2e2ddc5b.jpeg",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.27cc4f41.js",
     "static/js/2.171fb0a7.chunk.js",
-    "static/css/main.edbb06d5.chunk.css",
+    "static/css/main.6c4ed2d9.chunk.css",
     "static/js/main.a5262d3f.chunk.js"
   ]
 }
