@@ -32,6 +32,7 @@
 .Preview_Button_Active h2 {
   color: white;
   text-align: center;
+  text-shadow: 1px 1px black;
 }
 
 

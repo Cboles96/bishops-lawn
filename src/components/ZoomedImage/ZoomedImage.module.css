@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 20%;
+    bottom: 0;
     margin: auto;
     z-index: 1000;
     cursor: zoom-out;
@@ -27,6 +27,12 @@
     .Zoomed_Image {
         width: 100%;
         height: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Zoomed_Image {
+        bottom: 20%;
     }
 }
 

@@ -27,13 +27,17 @@
 
 @media (max-width: 991px) {
   .Back_Button,
-  .Slide_One_Unavailable,
-  .Last_Slide_Unavailable {
+  .Slide_One_Unavailable {
     order: 1;
-    padding: 0 5px;
     margin-top: 15px;
     margin-left: 0;
     margin-right: 0;
+    padding: 0 5px;
+  }
+
+  .Last_Slide_Unavailable {
+    order: 1;
+    margin: 12px 0;
   }
 
   .Next_Button {

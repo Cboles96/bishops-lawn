@@ -144,6 +144,26 @@
   }
 }
 
+@media (max-width: 620px) {
+  .Carousel {
+    height: 700px;
+  }
+
+  .Slide_One_Image,
+  .Slide_Two_Image,
+  .Slide_Three_Image,
+  .Slide_Four_Image,
+  .Slide_Five_Image,
+  .Slide_Six_Image,
+  .Slide_Seven_Image,
+  .Slide_Eight_Image,
+  .Slide_Nine_Image,
+  .Slide_Ten_Image {
+    height: 500px;
+    width: 500px;
+  }
+}
+
 @media (max-width: 400px) {
   .Carousel {
     height: 400px;

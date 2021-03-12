@@ -8,9 +8,10 @@
 }
 
 .Welcome h1 {
+  font-family: "Nunito", sans-serif;
   color: white;
   font-size: 4rem;
-  text-shadow: 2px 2px black;
+  text-shadow: 4px 4px black;
   text-align: center;
   margin: 0;
 }
@@ -55,6 +56,12 @@
   }
 }
 
+@media (max-width: 1090px) {
+  .Welcome h1 {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 850px) {
   .Grid {
     grid-template-columns: repeat(3, 1fr);
@@ -63,6 +70,11 @@
   .Grid img {
     width: 150px;
     height: 100px;
+  }
+
+  .Welcome h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px black;
   }
 }
 

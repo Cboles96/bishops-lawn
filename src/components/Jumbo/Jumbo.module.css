@@ -1,11 +1,8 @@
 .Background {
-  height: 700px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url("../../assets/images/background/grass2.png");
-  background-repeat: no-repeat;
-  background-size: cover; */
   background-color: transparent;
   position: relative;
 }
