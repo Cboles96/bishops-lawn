@@ -1,0 +1,51 @@
+.Modal_Container {
+  width: 30%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  position: fixed;
+  top: 25%;
+  left: 34%;
+  z-index: 1000;
+  animation: fade-in 0.5s;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
+
+.Modal_Hidden {
+  display: none !important;
+}
+
+.Icon_List {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 0;
+}
+
+.Icon_List li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.Icon_List img {
+  padding: 10px;
+}
+
+.Icon_List a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.Icon_List a:hover {
+    opacity: 0.8;
+}

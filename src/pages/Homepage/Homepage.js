@@ -32,8 +32,8 @@ class Homepage extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     const loggedIn = false;
-    if (loggedIn) {
-      setTimeout(() => {
+    if (!loggedIn) {
+       setTimeout(() => {
         this.setState({
           backdrop: !this.state.backdrop,
           modal: !this.state.modal,

@@ -60,10 +60,8 @@ const Carousel = () => {
       case "galleryFour":
         return classes.Slide_Four_Image;
       case "galleryFive":
-        console.log('galleryfive');
         return classes.Slide_Five_Image;
       case "gallerySix":
-        console.log('gallerysix');
         return classes.Slide_Six_Image;
       case "gallerySeven":
         return classes.Slide_Seven_Image;

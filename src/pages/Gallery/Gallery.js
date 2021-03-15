@@ -33,7 +33,6 @@ class Gallery extends Component {
   render() {
     const imageClickedHandler = (gallery) => {
       this.setState({ backdrop: true, showImage: true, image: gallery });
-      console.log(this.state.image);
     };
 
     const backdropClickedHandler = () => {

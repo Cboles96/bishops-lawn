@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, useHistory, Switch } from "react-router-dom";
+
 
 import NavigationItems from "../src/components/Navigation/NavigationItems";
 import Footer from "../src/components/Footer/Footer";
@@ -16,6 +17,12 @@ import SideDrawer from "../src/UI/SideDrawer/SideDrawer";
 import "./App.css";
 
 function App() {
+  const history = useHistory();
+
+  if (history.location.pathname === "/") {
+    history.push('/home');
+  }
+
   let routes = null;
   const [backdrop, showBackdrop] = useState(false);
   const [sidedrawer, showSideDrawer] = useState(false);
@@ -23,7 +30,6 @@ function App() {
   const menuBtnClickedHandler = () => {
     showSideDrawer(true);
     showBackdrop(true);
-    console.log(sidedrawer);
   };
 
   const backdropClickedHandler = () => {
