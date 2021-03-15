@@ -3,6 +3,7 @@ import React from "react";
 import About from "../../../assets/images/icons/about.png";
 import Services from "../../../assets/images/icons/services.png";
 import Gallery from "../../../assets/images/icons/gallery.png";
+import Store from '../../../assets/images/icons/store.png';
 
 import classes from "../FooterModal/FooterModal.module.css";
 
@@ -58,6 +59,23 @@ const FooterModal = (props) => {
             href="https://icons8.com/icons/set/stack-of-photos--v1"
           >
             Photo Gallery icon
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://icons8.com"
+          >
+            icon by Icons8
+          </a>
+        </li>
+        <li>
+          <img src={Store} alt="Store"></img>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://icons8.com/icons/set/us-dollar"
+          >
+            US Dollar icon
           </a>
           <a
             target="_blank"

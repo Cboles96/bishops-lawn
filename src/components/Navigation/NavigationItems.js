@@ -12,6 +12,7 @@ import About from "../../assets/images/icons/about.png";
 import Services from "../../assets/images/icons/services.png";
 import Gallery from "../../assets/images/icons/gallery.png";
 import Store from "../../assets/images/icons/store.png";
+import Contact from '../../assets/images/icons/contact.png';
 
 import classes from "../Navigation/NavigationItems.module.css";
 
@@ -66,7 +67,12 @@ const NavigationItems = () => {
               </NavLink>
               <NavigationItem link="/store">Store</NavigationItem>
             </div>
-            <NavigationItem link="/contact">Contact Us</NavigationItem>
+            <div className={classes.Contact}>
+              <NavLink to="/contact">
+                <img src={Contact} alt="Contact"></img>
+              </NavLink>
+              <NavigationItem link="/contact">Contact</NavigationItem>
+            </div>
           </ul>
         </div>
       </header>

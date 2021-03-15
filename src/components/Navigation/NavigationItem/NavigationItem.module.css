@@ -11,9 +11,8 @@
   text-decoration: none;
   display: block;
   color: white;
-  text-shadow: 1px 1px black;
 }
 
 .NavigationItem a:hover {
-  opacity: 0.9;
+  opacity: 0.5;
 }
