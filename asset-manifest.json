@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bishops-lawn/static/css/main.6c4ed2d9.chunk.css",
-    "main.js": "/bishops-lawn/static/js/main.a5262d3f.chunk.js",
-    "main.js.map": "/bishops-lawn/static/js/main.a5262d3f.chunk.js.map",
+    "main.css": "/bishops-lawn/static/css/main.6af469e6.chunk.css",
+    "main.js": "/bishops-lawn/static/js/main.c8f34a44.chunk.js",
+    "main.js.map": "/bishops-lawn/static/js/main.c8f34a44.chunk.js.map",
     "runtime-main.js": "/bishops-lawn/static/js/runtime-main.27cc4f41.js",
     "runtime-main.js.map": "/bishops-lawn/static/js/runtime-main.27cc4f41.js.map",
-    "static/js/2.171fb0a7.chunk.js": "/bishops-lawn/static/js/2.171fb0a7.chunk.js",
-    "static/js/2.171fb0a7.chunk.js.map": "/bishops-lawn/static/js/2.171fb0a7.chunk.js.map",
+    "static/js/2.6e1dfbe4.chunk.js": "/bishops-lawn/static/js/2.6e1dfbe4.chunk.js",
+    "static/js/2.6e1dfbe4.chunk.js.map": "/bishops-lawn/static/js/2.6e1dfbe4.chunk.js.map",
     "index.html": "/bishops-lawn/index.html",
-    "precache-manifest.48d85404f9e4b2b09af7feb61729d825.js": "/bishops-lawn/precache-manifest.48d85404f9e4b2b09af7feb61729d825.js",
+    "precache-manifest.b8fa24c64964404ebd8fa19d11cf29b9.js": "/bishops-lawn/precache-manifest.b8fa24c64964404ebd8fa19d11cf29b9.js",
     "service-worker.js": "/bishops-lawn/service-worker.js",
-    "static/css/main.6c4ed2d9.chunk.css.map": "/bishops-lawn/static/css/main.6c4ed2d9.chunk.css.map",
-    "static/js/2.171fb0a7.chunk.js.LICENSE.txt": "/bishops-lawn/static/js/2.171fb0a7.chunk.js.LICENSE.txt",
+    "static/css/main.6af469e6.chunk.css.map": "/bishops-lawn/static/css/main.6af469e6.chunk.css.map",
+    "static/js/2.6e1dfbe4.chunk.js.LICENSE.txt": "/bishops-lawn/static/js/2.6e1dfbe4.chunk.js.LICENSE.txt",
     "static/media/cap-white-front-logo.png": "/bishops-lawn/static/media/cap-white-front-logo.4f007b02.png",
     "static/media/dropdown-arrow.jpeg": "/bishops-lawn/static/media/dropdown-arrow.2e2ddc5b.jpeg",
     "static/media/gallery-1-temp.jpg": "/bishops-lawn/static/media/gallery-1-temp.769743de.jpg",
@@ -34,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.27cc4f41.js",
-    "static/js/2.171fb0a7.chunk.js",
-    "static/css/main.6c4ed2d9.chunk.css",
-    "static/js/main.a5262d3f.chunk.js"
+    "static/js/2.6e1dfbe4.chunk.js",
+    "static/css/main.6af469e6.chunk.css",
+    "static/js/main.c8f34a44.chunk.js"
   ]
 }
