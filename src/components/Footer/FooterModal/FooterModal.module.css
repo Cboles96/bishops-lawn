@@ -1,14 +1,14 @@
 .Modal_Container {
-  width: 40%;
-  height: 350px;
+  width: 45%;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
   position: fixed;
-  top: 25%;
-  left: 30%;
+  top: 35%;
+  left: 28%;
   z-index: 1000;
   animation: fade-in 0.5s;
   box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);

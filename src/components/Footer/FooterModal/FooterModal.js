@@ -3,7 +3,8 @@ import React from "react";
 import About from "../../../assets/images/icons/about.png";
 import Services from "../../../assets/images/icons/services.png";
 import Gallery from "../../../assets/images/icons/gallery.png";
-import Store from '../../../assets/images/icons/store.png';
+import Store from "../../../assets/images/icons/store.png";
+import Contact from '../../../assets/images/icons/contact.png';
 
 import classes from "../FooterModal/FooterModal.module.css";
 
@@ -76,6 +77,23 @@ const FooterModal = (props) => {
             href="https://icons8.com/icons/set/us-dollar"
           >
             US Dollar icon
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://icons8.com"
+          >
+            icon by Icons8
+          </a>
+        </li>
+        <li>
+          <img src={Contact} alt="Contact"></img>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://icons8.com/icons/set/mail-contact"
+          >
+            Mail Contact icon
           </a>
           <a
             target="_blank"

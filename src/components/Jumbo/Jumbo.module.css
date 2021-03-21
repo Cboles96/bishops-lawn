@@ -9,13 +9,13 @@
 
 .Background h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 3rem;
+  font-size: 5rem;
   position: absolute;
   color: white;
   text-align: center;
-  width: 70%;
-  top: 35%;
-  left: 15%;
+  width: 50%;
+  top: 18%;
+  left: 25%;
 }
 
 @media (max-width: 1410px) {

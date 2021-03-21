@@ -19,7 +19,7 @@ import "./App.css";
 function App() {
   const history = useHistory();
 
-  if (history.location.pathname === "/") {
+  if (history.location.pathname === "/" || history.location.pathname === "/#") {
     history.push('/home');
   }
 
