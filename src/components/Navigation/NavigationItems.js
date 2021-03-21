@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import Aux from "../../hoc/Aux";
 import NavigationItem from "./NavigationItem/NavigationItem";
@@ -12,11 +13,64 @@ import About from "../../assets/images/icons/about.png";
 import Services from "../../assets/images/icons/services.png";
 import Gallery from "../../assets/images/icons/gallery.png";
 import Store from "../../assets/images/icons/store.png";
-import Contact from '../../assets/images/icons/contact.png';
+import Contact from "../../assets/images/icons/contact.png";
 
 import classes from "../Navigation/NavigationItems.module.css";
 
 const NavigationItems = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    activePathHandler();
+  });
+
+  let activeHomePage;
+  let activeAboutPage;
+  let activeServicesPage;
+  let activeGalleryPage;
+  let activeStorePage;
+  let activeContactPage;
+
+  const activePathHandler = () => {
+    switch (history.location.pathname) {
+      case "/home":
+        activeHomePage = (
+          <img
+            className={`${classes.Logo} ${classes.Active}`}
+            src={Logo}
+            alt="Logo"
+          ></img>
+        );
+        return activeHomePage;
+      case "/about":
+        activeAboutPage = (
+          <img className={classes.Active} src={About} alt="About Us"></img>
+        );
+        return activeAboutPage;
+      case "/services":
+        activeServicesPage = (
+          <img className={classes.Active} src={Services} alt="Services"></img>
+        );
+        return activeServicesPage;
+      case "/gallery":
+        activeGalleryPage = (
+          <img className={classes.Active} src={Gallery} alt="Gallery"></img>
+        );
+        return activeGalleryPage;
+      case "/store":
+        activeStorePage = (
+          <img className={classes.Active} src={Store} alt="Store"></img>
+        );
+        return activeStorePage;
+      case "/contact":
+        activeContactPage = (
+          <img className={classes.Active} src={Contact} alt="Contact"></img>
+        );
+        return activeContactPage;
+      default:
+        return null;
+    }
+  };
   return (
     <Aux>
       <header className={classes.Header}>
@@ -29,9 +83,13 @@ const NavigationItems = () => {
           >
             <img src={InstagramLink} alt="Instagram Link"></img>
           </a>
-          <NavigationItem link="/home">
-            <img className={classes.Logo} src={Logo} alt="Logo"></img>
-          </NavigationItem>
+          <NavLink to="/home">
+            {activePathHandler() === activeHomePage ? (
+              activeHomePage
+            ) : (
+              <img className={classes.Logo} src={Logo} alt="Logo"></img>
+            )}
+          </NavLink>
           <a
             className={classes.FacebookLink}
             href="https://www.facebook.com/Bishops-Lawn-Care-531145520277013/"
@@ -45,31 +103,87 @@ const NavigationItems = () => {
           <ul className={classes.NavigationItems}>
             <div className={classes.About}>
               <NavLink to="/about">
-                <img src={About} alt="About Us"></img>
+                {activePathHandler() === activeAboutPage ? (
+                  activeAboutPage
+                ) : (
+                  <img
+                    className={classes.Inactive}
+                    src={About}
+                    alt="About Us"
+                  ></img>
+                )}
               </NavLink>
-              <NavigationItem link="/about">About</NavigationItem>
+              {activePathHandler() === activeAboutPage ? (
+                <NavigationItem link="/about" class={classes.Active}>
+                  About
+                </NavigationItem>
+              ) : (
+                <NavigationItem link="/about" class={"classes.Inactive"}>
+                  About
+                </NavigationItem>
+              )}
             </div>
             <div className={classes.Services}>
               <NavLink to="/services">
-                <img src={Services} alt="Services"></img>
+                {activePathHandler() === activeServicesPage ? (
+                  activeServicesPage
+                ) : (
+                  <img
+                    className={classes.Inactive}
+                    src={Services}
+                    alt="Services"
+                  ></img>
+                )}
               </NavLink>
-              <NavigationItem link="/services">Services</NavigationItem>
+              {activePathHandler() === activeServicesPage ? (
+                <NavigationItem link="/services" class={classes.Active}>
+                  Services
+                </NavigationItem>
+              ) : (
+                <NavigationItem link="/services" class={classes.Inactive}>
+                  Services
+                </NavigationItem>
+              )}
             </div>
             <div className={classes.Gallery}>
               <NavLink to="/gallery">
-                <img src={Gallery} alt="Gallery"></img>
+                {activePathHandler() === activeGalleryPage ? (
+                  activeGalleryPage
+                ) : (
+                  <img
+                    className={classes.Inactive}
+                    src={Gallery}
+                    alt="Gallery"
+                  ></img>
+                )}
               </NavLink>
               <NavigationItem link="/gallery">Gallery</NavigationItem>
             </div>
             <div className={classes.Store}>
               <NavLink to="/store">
-                <img src={Store} alt="Store"></img>
+                {activePathHandler() === activeStorePage ? (
+                  activeStorePage
+                ) : (
+                  <img
+                    className={classes.Inactive}
+                    src={Store}
+                    alt="Store"
+                  ></img>
+                )}
               </NavLink>
               <NavigationItem link="/store">Store</NavigationItem>
             </div>
             <div className={classes.Contact}>
               <NavLink to="/contact">
-                <img src={Contact} alt="Contact"></img>
+                {activePathHandler() === activeContactPage ? (
+                  activeContactPage
+                ) : (
+                  <img
+                    className={classes.Inactive}
+                    src={Contact}
+                    alt="Contact"
+                  ></img>
+                )}
               </NavLink>
               <NavigationItem link="/contact">Contact</NavigationItem>
             </div>

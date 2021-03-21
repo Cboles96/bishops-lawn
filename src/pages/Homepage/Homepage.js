@@ -31,7 +31,7 @@ class Homepage extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    const loggedIn = false;
+    const loggedIn = true;
     if (!loggedIn) {
        setTimeout(() => {
         this.setState({

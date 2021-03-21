@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Route, useHistory, Switch } from "react-router-dom";
-
+import { Route, useHistory, Switch, withRouter } from "react-router-dom";
 
 import NavigationItems from "../src/components/Navigation/NavigationItems";
 import Footer from "../src/components/Footer/Footer";
@@ -20,7 +19,7 @@ function App() {
   const history = useHistory();
 
   if (history.location.pathname === "/" || history.location.pathname === "/#") {
-    history.push('/home');
+    history.push("/home");
   }
 
   let routes = null;
@@ -60,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

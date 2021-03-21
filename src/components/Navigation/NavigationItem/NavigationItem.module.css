@@ -11,8 +11,24 @@
   text-decoration: none;
   display: block;
   color: white;
+  opacity: 0.5;
 }
 
 .NavigationItem a:hover {
+  opacity: 1;
+}
+
+.Active {
+  text-decoration: none;
+  display: block;
+  color: white;
+  opacity: 1;
+}
+
+.Inactive {
+  text-decoration: none;
+  display: block;
+  color: white;
   opacity: 0.5;
 }
+

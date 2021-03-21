@@ -32,10 +32,11 @@
 
 .Logo {
   width: 150px;
+  opacity: 0.8;
 }
 
 .Logo:hover {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .NavigationItems {
@@ -47,6 +48,14 @@
 }
 
 .NavigationItems img:hover {
+  opacity: 1;
+}
+
+.Active {
+  opacity: 1;
+}
+
+.Inactive {
   opacity: 0.5;
 }
 

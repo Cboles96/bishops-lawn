@@ -1,13 +1,13 @@
 .Modal_Container {
   width: 45%;
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
   position: fixed;
-  top: 35%;
+  top: 25%;
   left: 28%;
   z-index: 1000;
   animation: fade-in 0.5s;
@@ -49,8 +49,36 @@
   font-size: 1rem;
   color: white;
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .Icon_List a:hover {
-    opacity: 0.8;
+    opacity: 1;
+}
+
+@media (max-width: 950px) {
+  .Modal_Container {
+    top: 20%;
+    height: 600px;
+  }
+
+  .Icon_List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .Modal_Container {
+    width: 65%;
+    height: 500px;
+    top: 8%;
+    left: 17%;
+  }
+
+  .Icon_List a {
+    font-size: 0.5rem;
+  }
 }
