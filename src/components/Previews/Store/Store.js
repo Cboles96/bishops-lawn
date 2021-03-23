@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavigationItem from "../../Navigation/NavigationItem/NavigationItem";
+import { NavLink } from "react-router-dom";
 
 import classes from "../Store/Store.module.css";
 
@@ -17,17 +17,17 @@ const Store = () => {
         promo code: <span className={classes.Code}>bishop</span> at checkout
       </h2>
       <div className={classes.Store_Items}>
-        <NavigationItem link="/store">
+        <NavLink to="/store">
           <img className={classes.Tshirt} src={tshirt_white} alt="tshirt"></img>
-        </NavigationItem>
+        </NavLink>
         <h3 className={classes.Tshirt_Tag}>$10.00 Custom White T-Shirt</h3>
-        <NavigationItem link="/store">
+        <NavLink to="/store">
           <img className={classes.Hat} src={hat_white} alt="hat"></img>
-        </NavigationItem>
+        </NavLink>
         <h3 className={classes.Hat_Tag}>$5.00 Custom White Ball-Cap</h3>
-        <NavigationItem link="/store">
+        <NavLink to="/store">
           <img className={classes.Mug} src={mug_white} alt="mug"></img>
-        </NavigationItem>
+        </NavLink>
         <h3 className={classes.Mug_Tag}>$3.00 Custom White Mug</h3>
       </div>
     </div>

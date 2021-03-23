@@ -1,4 +1,4 @@
-.NavigationItem {
+.NavigationItemLi {
   list-style: none;
   font-weight: bold;
   font-size: 1.25rem;
@@ -7,28 +7,40 @@
   border-radius: 5px;
 }
 
-.NavigationItem a {
+.About,
+.Services,
+.Gallery,
+.Store,
+.Contact {
   text-decoration: none;
   display: block;
   color: white;
-  opacity: 0.5;
+  position: absolute;
+  bottom: 0 !important;
+  transition: bottom 0.2s ease-in;
 }
 
-.NavigationItem a:hover {
-  opacity: 1;
+.About {
+  left: 22px;
 }
 
-.Active {
-  text-decoration: none;
-  display: block;
-  color: white;
-  opacity: 1;
+.Services {
+  left: 15px;
 }
 
-.Inactive {
-  text-decoration: none;
-  display: block;
-  color: white;
-  opacity: 0.5;
+.Gallery {
+  left: 15px;
 }
 
+.Store {
+  left: 25px;
+}
+
+.Contact {
+  left: 18px;
+}
+
+.NavigationItem_Hidden {
+  position: absolute;
+  bottom: -25px;
+}

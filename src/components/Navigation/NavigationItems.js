@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import { NavLink } from "react-router-dom";
 import { useHistory } from "react-router-dom";
@@ -23,6 +23,72 @@ const NavigationItems = () => {
   useEffect(() => {
     activePathHandler();
   });
+
+  const [showAboutNavItem, setShowAboutNavItem] = useState();
+  const [showServicesNavItem, setShowServicesNavItem] = useState();
+  const [showGalleryNavItem, setShowGalleryNavItem] = useState();
+  const [showStoreNavItem, setShowStoreNavItem] = useState();
+  const [showContactNavItem, setShowContactNavItem] = useState();
+
+  const aboutMouseOverHandler = () => {
+    setShowAboutNavItem("about");
+    setShowServicesNavItem();
+    setShowGalleryNavItem();
+    setShowStoreNavItem();
+    setShowContactNavItem();
+  };
+
+  const servicesMouseOverHandler = () => {
+    setShowAboutNavItem();
+    setShowServicesNavItem("services");
+    setShowGalleryNavItem();
+    setShowStoreNavItem();
+    setShowContactNavItem();
+  };
+
+  const galleryMouseOverHandler = () => {
+    setShowAboutNavItem();
+    setShowServicesNavItem();
+    setShowGalleryNavItem("gallery");
+    setShowStoreNavItem();
+    setShowContactNavItem();
+  };
+
+  const storeMouseOverHandler = () => {
+    setShowAboutNavItem();
+    setShowServicesNavItem();
+    setShowGalleryNavItem();
+    setShowStoreNavItem("store");
+    setShowContactNavItem();
+  };
+
+  const contactMouseOverHandler = () => {
+    setShowAboutNavItem();
+    setShowServicesNavItem();
+    setShowGalleryNavItem();
+    setShowStoreNavItem();
+    setShowContactNavItem("contact");
+  };
+
+  const aboutMouseOutHandler = () => {
+    setShowAboutNavItem();
+  };
+
+  const servicesMouseOutHandler = () => {
+    setShowServicesNavItem();
+  };
+
+  const galleryMouseOutHandler = () => {
+    setShowGalleryNavItem();
+  };
+
+  const storeMouseOutHandler = () => {
+    setShowStoreNavItem();
+  };
+
+  const contactMouseOutHandler = () => {
+    setShowContactNavItem();
+  };
 
   let activeHomePage;
   let activeAboutPage;
@@ -102,7 +168,11 @@ const NavigationItems = () => {
         <div className={classes.Header_Links}>
           <ul className={classes.NavigationItems}>
             <div className={classes.About}>
-              <NavLink to="/about">
+              <NavLink
+                to="/about"
+                onMouseOver={aboutMouseOverHandler}
+                onMouseOut={aboutMouseOutHandler}
+              >
                 {activePathHandler() === activeAboutPage ? (
                   activeAboutPage
                 ) : (
@@ -113,18 +183,16 @@ const NavigationItems = () => {
                   ></img>
                 )}
               </NavLink>
-              {activePathHandler() === activeAboutPage ? (
-                <NavigationItem link="/about" class={classes.Active}>
-                  About
-                </NavigationItem>
-              ) : (
-                <NavigationItem link="/about" class={"classes.Inactive"}>
-                  About
-                </NavigationItem>
-              )}
+              <NavigationItem
+                link="/about"
+                about={showAboutNavItem}
+                mouseover={aboutMouseOverHandler}
+              >
+                About
+              </NavigationItem>
             </div>
             <div className={classes.Services}>
-              <NavLink to="/services">
+              <NavLink to="/services" onMouseOver={servicesMouseOverHandler} onMouseOut={servicesMouseOutHandler}>
                 {activePathHandler() === activeServicesPage ? (
                   activeServicesPage
                 ) : (
@@ -135,18 +203,16 @@ const NavigationItems = () => {
                   ></img>
                 )}
               </NavLink>
-              {activePathHandler() === activeServicesPage ? (
-                <NavigationItem link="/services" class={classes.Active}>
-                  Services
-                </NavigationItem>
-              ) : (
-                <NavigationItem link="/services" class={classes.Inactive}>
-                  Services
-                </NavigationItem>
-              )}
+              <NavigationItem
+                link="/services"
+                services={showServicesNavItem}
+                mouseover={servicesMouseOverHandler}
+              >
+                Services
+              </NavigationItem>
             </div>
             <div className={classes.Gallery}>
-              <NavLink to="/gallery">
+              <NavLink to="/gallery" onMouseOver={galleryMouseOverHandler} onMouseOut={galleryMouseOutHandler}>
                 {activePathHandler() === activeGalleryPage ? (
                   activeGalleryPage
                 ) : (
@@ -157,10 +223,16 @@ const NavigationItems = () => {
                   ></img>
                 )}
               </NavLink>
-              <NavigationItem link="/gallery">Gallery</NavigationItem>
+              <NavigationItem
+                link="/gallery"
+                gallery={showGalleryNavItem}
+                mouseover={galleryMouseOverHandler}
+              >
+                Gallery
+              </NavigationItem>
             </div>
             <div className={classes.Store}>
-              <NavLink to="/store">
+              <NavLink to="/store" onMouseOver={storeMouseOverHandler} onMouseOut={storeMouseOutHandler}>
                 {activePathHandler() === activeStorePage ? (
                   activeStorePage
                 ) : (
@@ -171,10 +243,16 @@ const NavigationItems = () => {
                   ></img>
                 )}
               </NavLink>
-              <NavigationItem link="/store">Store</NavigationItem>
+              <NavigationItem
+                link="/store"
+                store={showStoreNavItem}
+                mouseover={storeMouseOverHandler}
+              >
+                Store
+              </NavigationItem>
             </div>
             <div className={classes.Contact}>
-              <NavLink to="/contact">
+              <NavLink to="/contact" onMouseOver={contactMouseOverHandler} onMouseOut={contactMouseOutHandler}>
                 {activePathHandler() === activeContactPage ? (
                   activeContactPage
                 ) : (
@@ -185,7 +263,13 @@ const NavigationItems = () => {
                   ></img>
                 )}
               </NavLink>
-              <NavigationItem link="/contact">Contact</NavigationItem>
+              <NavigationItem
+                link="/contact"
+                contact={showContactNavItem}
+                mouseover={contactMouseOverHandler}
+              >
+                Contact
+              </NavigationItem>
             </div>
           </ul>
         </div>
