@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-
-import Cancel from '../../../UI/Cancel/Cancel';
+import React from "react";
 
 import About from "../../../assets/images/icons/about.png";
 import Services from "../../../assets/images/icons/services.png";
@@ -11,9 +9,6 @@ import Contact from "../../../assets/images/icons/contact.png";
 import classes from "../FooterModal/FooterModal.module.css";
 
 const FooterModal = (props) => {
-  const [posLeft] = useState("91%");
-  const [posTop] = useState("0");
-
   return (
     <div
       className={
@@ -22,7 +17,6 @@ const FooterModal = (props) => {
           : `${classes.Modal_Container} ${classes.Modal_Hidden}`
       }
     >
-      <Cancel posLeft={posLeft} posTop={posTop} />
       <ul className={classes.Icon_List}>
         <li>
           <img src={About} alt="About Us"></img>

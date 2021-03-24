@@ -16,6 +16,7 @@ import SideDrawer from "../src/UI/SideDrawer/SideDrawer";
 import "./App.css";
 
 function App() {
+
   const history = useHistory();
 
   if (history.location.pathname === "/" || history.location.pathname === "/#") {

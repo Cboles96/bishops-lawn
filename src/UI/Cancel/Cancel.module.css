@@ -1,6 +1,11 @@
 .Cancel_Btn {
-    position: absolute;
+    position: fixed;
     padding: 10px 0;
+    z-index: 2000;
+}
+
+.Hidden {
+    display: none !important;
 }
 
 .Cancel_Btn img {
@@ -16,7 +21,7 @@
 
 @media (max-width: 400px) {
     .Cancel_Btn img {
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
     }
 }

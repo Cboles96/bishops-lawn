@@ -5,8 +5,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(darkblue, rgb(8, 185, 255), rgb(13, 104, 13));
-  position: fixed;  
+  background-image: linear-gradient(
+    darkblue,
+    rgb(8, 185, 255),
+    rgb(13, 104, 13)
+  );
+  position: fixed;
   top: 0%;
   left: 25%;
   z-index: 1000;
@@ -17,6 +21,13 @@
 
 .SideDrawer_Hidden {
   transform: translateX(-150%) !important;
+}
+
+.Links {
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 1rem;
 }
 
 .Link_List {

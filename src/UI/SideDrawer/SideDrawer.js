@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavigationItem from "../../components/Navigation/NavigationItem/NavigationItem";
+import { NavLink } from "react-router-dom";
 
 import classes from "../SideDrawer/SideDrawer.module.css";
 
@@ -14,11 +14,11 @@ const SideDrawer = (props) => {
       }
     >
       <ul className={classes.Link_List}>
-        <NavigationItem link="/about">About</NavigationItem>
-        <NavigationItem link="/services">Services</NavigationItem>
-        <NavigationItem link="/gallery">Gallery</NavigationItem>
-        <NavigationItem link="/store">Store</NavigationItem>
-        <NavigationItem link="/contact">Contact Us</NavigationItem>
+        <NavLink to="/about" className={classes.Links}>About</NavLink>
+        <NavLink to="/services" className={classes.Links}>Services</NavLink>
+        <NavLink to="/gallery" className={classes.Links}>Gallery</NavLink>
+        <NavLink to="/store" className={classes.Links}>Store</NavLink>
+        <NavLink to="/contact" className={classes.Links}>Contact Us</NavLink>
       </ul>
     </div>
   );
