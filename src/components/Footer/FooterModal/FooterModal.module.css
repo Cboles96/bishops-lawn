@@ -1,5 +1,5 @@
 .Modal_Container {
-  width: 45%;
+  width: 70%;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -7,10 +7,10 @@
   justify-content: center;
   background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
   position: fixed;
-  top: 25%;
-  left: 28%;
+  top: 27%;
+  left: 16%;
   z-index: 1000;
-  animation: fade-in 0.5s;
+  animation: FooterModal_fade-in__20lCm 0.5s;
   box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
 }
 

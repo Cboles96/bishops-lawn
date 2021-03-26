@@ -1,27 +1,33 @@
-.Cancel_Btn {
-    position: fixed;
-    padding: 10px 0;
-    z-index: 2000;
+.Footer_Class {
+  position: fixed;
+  padding: 10px 0;
+  z-index: 2000;
+  top: 23%;
+  left: 87%;
+}
+
+.Footer_Class img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+}
+
+.Footer_Class img:hover {
+  opacity: 1;
 }
 
 .Hidden {
-    display: none !important;
-}
-
-.Cancel_Btn img {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    opacity: 0.8;
-}
-
-.Cancel_Btn img:hover {
-    opacity: 1;
+  display: none !important;
 }
 
 @media (max-width: 400px) {
-    .Cancel_Btn img {
-        width: 40px;
-        height: 40px;
-    }
+  .Footer_Class {
+    top: 1%;
+    left: 88%;
+  }
+  .Footer_Class img {
+    width: 40px;
+    height: 40px;
+  }
 }

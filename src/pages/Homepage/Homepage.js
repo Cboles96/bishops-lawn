@@ -31,7 +31,7 @@ class Homepage extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    const loggedIn = true;
+    const loggedIn = false;
     if (!loggedIn) {
        setTimeout(() => {
         this.setState({
@@ -40,6 +40,7 @@ class Homepage extends Component {
         });
       }, 1500);
     }
+    console.log(this.props.ser);
   }
 
   render() {
@@ -178,13 +179,5 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actions.storeMouseOver(services, testimonial, store)),
   };
 };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     onAuth: (email, password, isSignup) =>
-//       dispatch(actions.auth(email, password, isSignup)),
-//     onSetAuthRedirectPath: () => dispatch(actions.setAuthRedirectPath("/")),
-//   };
-// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

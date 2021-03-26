@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import CancelBtn from "../../assets/images/icons/cancel.png";
 
@@ -6,11 +6,18 @@ import classes from "../Cancel/Cancel.module.css";
 
 const Cancel = (props) => {
 
+  const switchClass = () => {
+    switch(props.cancelClass) {
+      case "footer":
+        return classes.Footer_Class;
+      default: return classes.Hidden;
+    }
+  }
+
   return (
     <div
-      className={props.cancel ? classes.Cancel_Btn : `${classes.Cancel_Btn} ${classes.Hidden}`}
+      className={switchClass()}
       onClick={props.clicked}
-      style={{ left: props.posLeft, top: props.posTop }}
     >
       <img src={CancelBtn} alt="Cancel Button"></img>
     </div>

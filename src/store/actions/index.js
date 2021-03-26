@@ -1,5 +1,7 @@
 export {
     servicesMouseOver,
     testimonialMouseOver,
-    storeMouseOver
-} from './homepage';
+    storeMouseOver,
+    creditsClickedHandler,
+    cancelClickedHandler,
+} from './reducer';
