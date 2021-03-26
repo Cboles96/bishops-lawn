@@ -4,9 +4,9 @@ import { Route, useHistory, Switch, withRouter } from "react-router-dom";
 import NavigationItems from "../src/components/Navigation/NavigationItems";
 import Footer from "./containers/Footer/Footer";
 import Layout from "./hoc/Layout/Layout";
-import Homepage from "./pages/Homepage/Homepage";
-import Services from "./pages/Services/Services";
-import Gallery from "./pages/Gallery/Gallery";
+import Homepage from '../src/containers/pages/Homepage/Homepage';
+import Services from '../src/containers/pages/Services/Services';
+import Gallery from '../src/containers/pages/Gallery/Gallery';
 import Backdrop from "../src/UI/Backdrop/Backdrop";
 
 import DrawerToggle from "../src/UI/DrawerToggle/DrawerToggle";
