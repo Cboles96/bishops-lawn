@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import * as actions from "../../store/actions/index";
+import * as actions from "../../../store/actions/index";
 
-import PreviewButton from "../../UI/PreviewButton/PreviewButton";
-import Services from "../../components/Previews/Services/Services";
-import Testimonial from "../../components/Previews/Testimonial/Testimonial";
-import Store from "../../components/Previews/Store/Store";
-import Backdrop from "../../UI/Backdrop/Backdrop";
-import LoginModal from "../../components/Login-Modal/Login-Modal";
-import Jumbo from "../../components/Jumbo/Jumbo";
+import PreviewButton from "../../../UI/PreviewButton/PreviewButton";
+import Services from "../../../components/Previews/Services/Services";
+import Testimonial from "../../../components/Previews/Testimonial/Testimonial";
+import Store from "../../../components/Previews/Store/Store";
+import Backdrop from "../../../UI/Backdrop/Backdrop";
+import LoginModal from "../../../components/Login-Modal/Login-Modal";
+import Jumbo from '../../../components/Jumbo/Jumbo';
 
 import classes from "../Homepage/Homepage.module.css";
-import Aux from "../../hoc/Aux";
+import Aux from "../../../hoc/Aux";
 
 class Homepage extends Component {
   state = {

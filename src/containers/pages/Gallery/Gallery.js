@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 
-import Aux from "../../hoc/Aux";
-import Carousel from '../../components/Carousel/Carousel';
-import Backdrop from "../../UI/Backdrop/Backdrop";
-import ZoomedImage from "../../components/ZoomedImage/ZoomedImage";
+import Aux from "../../../hoc/Aux";
+import Carousel from '../../../components/Carousel/Carousel';
+import Backdrop from '../../../UI/Backdrop/Backdrop';
+import ZoomedImage from "../../../components/ZoomedImage/ZoomedImage";
 
 import classes from "../Gallery/Gallery.module.css";
 
-import galleryOne from "../../assets/images/gallery-temp/gallery-1-temp.jpg";
-import galleryTwo from "../../assets/images/gallery-temp/gallery-2-temp.jpg";
-import galleryThree from "../../assets/images/gallery-temp/gallery-3-temp.png";
-import galleryFour from "../../assets/images/gallery-temp/gallery-4-temp.jpg";
-import galleryFive from "../../assets/images/gallery-temp/gallery-5-temp.jpg";
-import gallerySix from "../../assets/images/gallery-temp/gallery-6-temp.jpg";
-import gallerySeven from "../../assets/images/gallery-temp/gallery-7-temp.jpg";
-import galleryEight from "../../assets/images/gallery-temp/gallery-8-temp.jpg";
-import galleryNine from "../../assets/images/gallery-temp/gallery-9-temp.jpg";
-import galleryTen from "../../assets/images/gallery-temp/gallery-10-temp.jpg";
-import photograph from '../../assets/images/icons/photos.png';
+import galleryOne from "../../../assets/images/gallery-temp/gallery-1-temp.jpg";
+import galleryTwo from "../../../assets/images/gallery-temp/gallery-2-temp.jpg";
+import galleryThree from "../../../assets/images/gallery-temp/gallery-3-temp.png";
+import galleryFour from "../../../assets/images/gallery-temp/gallery-4-temp.jpg";
+import galleryFive from "../../../assets/images/gallery-temp/gallery-5-temp.jpg";
+import gallerySix from "../../../assets/images/gallery-temp/gallery-6-temp.jpg";
+import gallerySeven from "../../../assets/images/gallery-temp/gallery-7-temp.jpg";
+import galleryEight from "../../../assets/images/gallery-temp/gallery-8-temp.jpg";
+import galleryNine from "../../../assets/images/gallery-temp/gallery-9-temp.jpg";
+import galleryTen from "../../../assets/images/gallery-temp/gallery-10-temp.jpg";
+import photograph from '../../../assets/images/icons/photos.png';
 
 class Gallery extends Component {
   state = {
