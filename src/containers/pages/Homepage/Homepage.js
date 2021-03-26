@@ -40,7 +40,6 @@ class Homepage extends Component {
         });
       }, 1500);
     }
-    console.log(this.props.ser);
   }
 
   render() {

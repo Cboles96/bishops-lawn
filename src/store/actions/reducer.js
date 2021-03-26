@@ -46,4 +46,3 @@ export const cancelClickedHandler = () => {
     type: actionTypes.CLOSE_CREDITS,
   };
 };
-

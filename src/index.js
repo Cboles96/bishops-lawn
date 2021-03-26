@@ -8,8 +8,6 @@ import * as serviceWorker from "./serviceWorker";
 
 import store from '../src/store/redux/store';
 
-console.log(store.getState());
-
 const app = (
   <HashRouter>
     <Provider store={store}>

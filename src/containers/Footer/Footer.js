@@ -4,7 +4,7 @@ import * as actions from "../../store/actions/index";
 
 import Aux from "../../hoc/Aux";
 import Backdrop from "../../UI/Backdrop/Backdrop";
-import FooterModal from "../../components/Footer/FooterModal/FooterModal";
+import FooterModal from "./FooterModal/FooterModal";
 import Cancel from "../../UI/Cancel/Cancel";
 import { connect } from "react-redux";
 
@@ -34,19 +34,20 @@ class Footer extends Component {
       showCredits = true;
       showBackdrop = true;
       showCancel = true;
-      cancelClass = 'footer';
+      cancelClass = "footer";
 
       this.props.onCredits(showCredits, showBackdrop, showCancel, cancelClass);
-      console.log(this.props.backdrops);
     };
-  
-    // const cancelClickedHandler = () => {
-    //   setShowCredits(false);
-    //   setShowBackdrop(false);
-    //   setShowCancel(false);
-    //   setCancelClass(null);
-    // };
-    return(
+
+    const cancelClickedHandler = () => {
+      showCredits = false;
+      showBackdrop = false;
+      showCancel = false;
+      cancelClass = null;
+
+      this.props.onCancel(showCredits, showBackdrop, showCancel, cancelClass);
+    };
+    return (
       <Aux>
         <footer className={classes.Footer_Container}>
           <ul>
@@ -72,9 +73,9 @@ class Footer extends Component {
         <Cancel
           cancel={this.props.cancel}
           cancelClass={this.props.cancelClass}
-          clicked={this.props.onCredits}
+          clicked={cancelClickedHandler}
         />
-        <Backdrop backdropState={this.props.backdrops} />
+        <Backdrop backdropState={this.props.backdrop} />
         <FooterModal creditState={this.props.credits} />
       </Aux>
     );
@@ -83,7 +84,7 @@ class Footer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    backdrops: state.backdrop,
+    backdrop: state.backdrop,
     credits: state.credits,
     cancel: state.cancel,
     cancelClass: state.cancelClass,
@@ -92,18 +93,20 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onCredits: (credits, backdrop, cancel, cancelClassName) => dispatch(actions.creditsClickedHandler(credits, backdrop, cancel, cancelClassName)),
+    onCredits: (credits, backdrop, cancel, cancelClassName) =>
+      dispatch(
+        actions.creditsClickedHandler(
+          credits,
+          backdrop,
+          cancel,
+          cancelClassName
+        )
+      ),
+    onCancel: (credits, backdrop, cancel, cancelClassName) =>
+      dispatch(
+        actions.cancelClickedHandler(credits, backdrop, cancel, cancelClassName)
+      ),
   };
 };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     onServices: (services, testimonial, store) =>
-//       dispatch(actions.servicesMouseOver(services, testimonial, store)),
-//     onTestimonial: (services, testimonial, store) =>
-//       dispatch(actions.testimonialMouseOver(services, testimonial, store)),
-//     onStore: (services, testimonial, store) =>
-//       dispatch(actions.storeMouseOver(services, testimonial, store)),
-//   };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Footer);

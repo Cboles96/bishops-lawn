@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Route, useHistory, Switch, withRouter } from "react-router-dom";
 
 import NavigationItems from "../src/components/Navigation/NavigationItems";
-import Footer from "../src/components/Footer/Footer";
+import Footer from "./containers/Footer/Footer";
 import Layout from "./hoc/Layout/Layout";
 import Homepage from "./pages/Homepage/Homepage";
 import Services from "./pages/Services/Services";
