@@ -2,6 +2,8 @@ export {
     servicesMouseOver,
     testimonialMouseOver,
     storeMouseOver,
-    creditsClickedHandler,
-    cancelClickedHandler,
+    showLoginModal,
+    closeLoginModal,
+    showCreditsModal,
+    closeCreditsModal
 } from './reducer';

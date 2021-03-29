@@ -5,10 +5,14 @@ const initialState = {
   services: false,
   testimonial: true,
   store: false,
-  backdrop: false,
-  credits: false,
-  cancel: false,
-  cancelClass: null,
+  loginBackdrop: false,
+  loginModal: false,
+  loginCancel: false,
+  loginCancelClass: null,
+  creditsBackdrop: false,
+  creditsModal: false,
+  creditsCancel: false,
+  creditsCancelClass: null,
 };
 
 // Homepage
@@ -37,23 +41,43 @@ const storeHandler = (state, action) => {
   });
 };
 
-// Footer
+// Login Modal
 
-const creditsClickedHandler = (state, action) => {
+const showLoginModal = (state, action) => {
   return updateObject(state, {
-    backdrop: action.backdrop,
-    credits: action.credits,
-    cancel: action.cancel,
-    cancelClass: action.cancelClassName,
+    loginBackdrop: action.loginBackdrop,
+    loginModal: action.loginModal,
+    loginCancel: action.loginCancel,
+    loginCancelClass: action.loginCancelClass,
   });
 };
 
-const cancelClickedHandler = (state, action) => {
+const closeLoginModal = (state, action) => {
   return updateObject(state, {
-    credits: false,
-    backdrop: false,
-    cancel: false,
-    cancelClass: null,
+    loginBackdrop: action.loginBackdrop,
+    loginModal: action.loginModal,
+    loginCancel: action.loginCancel,
+    loginCancelClass: action.loginCancelClass,
+  });
+};
+
+// Credits Modal
+
+const showCreditsModal = (state, action) => {
+  return updateObject(state, {
+    creditsBackdrop: action.creditsBackdrop,
+    creditsModal: action.creditsModal,
+    creditsCancel: action.creditsCancel,
+    creditsCancelClass: action.creditsCancelClass,
+  });
+};
+
+const closeCreditsModal = (state, action) => {
+  return updateObject(state, {
+    creditsBackdrop: action.creditsBackdrop,
+    creditsModal: action.creditsModal,
+    creditsCancel: action.creditsCancel,
+    creditsCancelClass: action.creditsCancelClass,
   });
 };
 
@@ -65,10 +89,14 @@ const reducer = (state = initialState, action) => {
       return testimonialHandler(state, action);
     case actionTypes.OPEN_STORE:
       return storeHandler(state, action);
-    case actionTypes.OPEN_CREDITS:
-      return creditsClickedHandler(state, action);
-    case actionTypes.CLOSE_CREDITS:
-      return cancelClickedHandler(state, action);
+    case actionTypes.OPEN_LOGIN_MODAL:
+      return showLoginModal(state, action);
+    case actionTypes.CLOSE_LOGIN_MODAL:
+      return closeLoginModal(state, action);
+    case actionTypes.OPEN_CREDITS_MODAL:
+      return showCreditsModal(state, action);
+    case actionTypes.CLOSE_CREDITS_MODAL:
+      return closeCreditsModal(state, action);
     default:
       return state;
   }

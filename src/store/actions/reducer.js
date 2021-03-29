@@ -29,20 +29,46 @@ export const storeMouseOver = (services, testimonial, store) => {
   };
 };
 
-// Footer
+// Login Modal
 
-export const creditsClickedHandler = (credits, backdrop, cancel, cancelClassName) => {
+export const showLoginModal = (backdrop, modal, cancel, cancelClass) => {
   return {
-    type: actionTypes.OPEN_CREDITS,
-    credits: credits,
-    backdrop: backdrop,
-    cancel: cancel,
-    cancelClassName: cancelClassName
+    type: actionTypes.OPEN_LOGIN_MODAL,
+    loginBackdrop: backdrop,
+    loginModal: modal,
+    loginCancel: cancel,
+    loginCancelClass: cancelClass
   };
 };
 
-export const cancelClickedHandler = () => {
+export const closeLoginModal = (backdrop, modal, cancel, cancelClass) => {
   return {
-    type: actionTypes.CLOSE_CREDITS,
+    type: actionTypes.CLOSE_LOGIN_MODAL,
+    loginBackdrop: backdrop,
+    loginModal: modal,
+    loginCancel: cancel,
+    loginCancelClass: cancelClass
+  };
+};
+
+// Credits Modal
+
+export const showCreditsModal = (backdrop, modal, cancel, cancelClass) => {
+  return {
+    type: actionTypes.OPEN_CREDITS_MODAL,
+    creditsBackdrop: backdrop,
+    creditsModal: modal,
+    creditsCancel: cancel,
+    creditsCancelClass: cancelClass
+  };
+};
+
+export const closeCreditsModal = (backdrop, modal, cancel, cancelClass) => {
+  return {
+    type: actionTypes.CLOSE_CREDITS_MODAL,
+    creditsBackdrop: backdrop,
+    creditsModal: modal,
+    creditsCancel: cancel,
+    creditsCancelClass: cancelClass
   };
 };

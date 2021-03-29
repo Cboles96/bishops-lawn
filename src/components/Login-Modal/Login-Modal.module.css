@@ -7,8 +7,8 @@
   justify-content: center;
   background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
   position: fixed;
-  top: 10%;
-  left: 34%;
+  top: 15%;
+  left: 35%;
   z-index: 1000;
   animation: fade-in 0.5s;
   box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
@@ -128,7 +128,9 @@ form a:hover {
 
 @media (max-width: 375px) {
   .Modal_Container {
-    height: 580px;
-    top: 5%;
+    height: 90%;
+    width: 75%;
+    top: 6%;
+    left: 13%;
   }
 }

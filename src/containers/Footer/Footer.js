@@ -25,27 +25,27 @@ class Footer extends Component {
   // const [cancelClass, setCancelClass] = useState();
 
   render() {
-    let showCredits = false;
-    let showBackdrop = false;
-    let showCancel = false;
+    let modal = false;
+    let backdrop = false;
+    let cancel = false;
     let cancelClass = null;
 
-    const creditsClickedHandler = () => {
-      showCredits = true;
-      showBackdrop = true;
-      showCancel = true;
+    const showModal = () => {
+      modal = true;
+      backdrop = true;
+      cancel = true;
       cancelClass = "footer";
 
-      this.props.onCredits(showCredits, showBackdrop, showCancel, cancelClass);
+      this.props.onShowCredits(backdrop, modal, cancel, cancelClass);
     };
 
-    const cancelClickedHandler = () => {
-      showCredits = false;
-      showBackdrop = false;
-      showCancel = false;
+    const closeModal = () => {
+      modal = false;
+      backdrop = false;
+      cancel = false;
       cancelClass = null;
 
-      this.props.onCancel(showCredits, showBackdrop, showCancel, cancelClass);
+      this.props.onCloseCredits(backdrop, modal, cancel, cancelClass);
     };
     return (
       <Aux>
@@ -64,7 +64,7 @@ class Footer extends Component {
               <a href="/">Customer Service</a>
             </li>
             <li>
-              <p className={classes.Credit} onClick={creditsClickedHandler}>
+              <p className={classes.Credit} onClick={showModal}>
                 Artwork Credit
               </p>
             </li>
@@ -73,10 +73,10 @@ class Footer extends Component {
         <Cancel
           cancel={this.props.cancel}
           cancelClass={this.props.cancelClass}
-          clicked={cancelClickedHandler}
+          clicked={closeModal}
         />
         <Backdrop backdropState={this.props.backdrop} />
-        <FooterModal creditState={this.props.credits} />
+        <FooterModal creditState={this.props.modal} />
       </Aux>
     );
   }
@@ -84,27 +84,27 @@ class Footer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    backdrop: state.backdrop,
-    credits: state.credits,
-    cancel: state.cancel,
-    cancelClass: state.cancelClass,
+    backdrop: state.creditsBackdrop,
+    modal: state.creditsModal,
+    cancel: state.creditsCancel,
+    cancelClass: state.creditsCancelClass,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onCredits: (credits, backdrop, cancel, cancelClassName) =>
+    onShowCredits: (backdrop, modal, cancel, cancelClass) =>
       dispatch(
-        actions.creditsClickedHandler(
-          credits,
+        actions.showCreditsModal(
           backdrop,
+          modal,
           cancel,
-          cancelClassName
+          cancelClass
         )
       ),
-    onCancel: (credits, backdrop, cancel, cancelClassName) =>
+    onCloseCredits: (backdrop, modal, cancel, cancelClass) =>
       dispatch(
-        actions.cancelClickedHandler(credits, backdrop, cancel, cancelClassName)
+        actions.closeCreditsModal(backdrop, modal, cancel, cancelClass)
       ),
   };
 };

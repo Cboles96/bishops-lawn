@@ -1,5 +1,5 @@
 .Modal_Container {
-  width: 70%;
+  width: 50%;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -8,9 +8,9 @@
   background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
   position: fixed;
   top: 27%;
-  left: 16%;
+  left: 25%;
   z-index: 1000;
-  animation: FooterModal_fade-in__20lCm 0.5s;
+  animation: FooterModal_FooterModal_fade-in__20lCm__2zt2D 0.5s;
   box-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
 }
 
@@ -53,7 +53,7 @@
 }
 
 .Icon_List a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 @media (max-width: 950px) {

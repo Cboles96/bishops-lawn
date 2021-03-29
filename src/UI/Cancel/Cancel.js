@@ -10,6 +10,8 @@ const Cancel = (props) => {
     switch(props.cancelClass) {
       case "footer":
         return classes.Footer_Class;
+      case "login":
+        return classes.Login_Class;
       default: return classes.Hidden;
     }
   }

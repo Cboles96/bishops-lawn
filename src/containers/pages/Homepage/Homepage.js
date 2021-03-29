@@ -9,7 +9,8 @@ import Testimonial from "../../../components/Previews/Testimonial/Testimonial";
 import Store from "../../../components/Previews/Store/Store";
 import Backdrop from "../../../UI/Backdrop/Backdrop";
 import LoginModal from "../../../components/Login-Modal/Login-Modal";
-import Jumbo from '../../../components/Jumbo/Jumbo';
+import Jumbo from "../../../components/Jumbo/Jumbo";
+import Cancel from "../../../UI/Cancel/Cancel";
 
 import classes from "../Homepage/Homepage.module.css";
 import Aux from "../../../hoc/Aux";
@@ -30,14 +31,20 @@ class Homepage extends Component {
   };
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    let backdrop = false;
+    let modal = false;
+    let cancel = false;
+    let cancelClass = null;
+
     const loggedIn = false;
     if (!loggedIn) {
-       setTimeout(() => {
-        this.setState({
-          backdrop: !this.state.backdrop,
-          modal: !this.state.modal,
-        });
+      setTimeout(() => {
+        backdrop = true;
+        modal = true;
+        cancel = true;
+        cancelClass = "login";
+
+        this.props.onShowLogin(backdrop, modal, cancel, cancelClass);
       }, 1500);
     }
   }
@@ -50,6 +57,11 @@ class Homepage extends Component {
     let services = null;
     let testimonial = null;
     let store = null;
+
+    let backdrop = false;
+    let modal = false;
+    let cancel = false;
+    let cancelClass = null;
 
     const servicesMouseOverHandler = () => {
       // this.setState({ services: true, testimonial: false, store: false });
@@ -90,8 +102,13 @@ class Homepage extends Component {
       this.props.onStore(services, testimonial, store);
     };
 
-    const backdropClickedHandler = () => {
-      this.setState({ backdrop: false, modal: false });
+    const closeModal = () => {
+      backdrop = false;
+      modal = false;
+      cancel = false;
+      cancelClass = null;
+
+      this.props.onCloseLogin(backdrop, modal, cancel, cancelClass);
     };
 
     const emailChangedHandler = (event) => {
@@ -112,16 +129,18 @@ class Homepage extends Component {
 
     return (
       <Aux>
-        <Backdrop
-          clicked={backdropClickedHandler}
-          backdropState={this.state.backdrop}
-        />
+        <Backdrop clicked={closeModal} backdropState={this.props.backdrop} />
         <LoginModal
-          modalState={this.state.modal}
+          modalState={this.props.modal}
           emailState={this.state.email}
           passwordState={this.state.password}
           emailChanged={emailChangedHandler}
           passwordChanged={passwordChangedHandler}
+        />
+        <Cancel
+          cancel={this.props.cancel}
+          cancelClass={this.props.cancelClass}
+          clicked={closeModal}
         />
         <Jumbo />
         <div className={classes.Preview_Grid}>
@@ -165,6 +184,10 @@ const mapStateToProps = (state) => {
     ser: state.services,
     test: state.testimonial,
     st: state.store,
+    backdrop: state.loginBackdrop,
+    modal: state.loginModal,
+    cancel: state.loginCancel,
+    cancelClass: state.loginCancelClass,
   };
 };
 
@@ -176,6 +199,10 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actions.testimonialMouseOver(services, testimonial, store)),
     onStore: (services, testimonial, store) =>
       dispatch(actions.storeMouseOver(services, testimonial, store)),
+    onShowLogin: (backdrop, modal, cancel, cancelClass) =>
+      dispatch(actions.showLoginModal(backdrop, modal, cancel, cancelClass)),
+    onCloseLogin: (backdrop, modal, cancel, cancelClass) =>
+      dispatch(actions.closeLoginModal(backdrop, modal, cancel, cancelClass)),
   };
 };
 
