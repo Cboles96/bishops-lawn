@@ -1,5 +1,12 @@
 .Testimonial_Wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  height: 1600px;
+}
+
+@media (max-width: 637px) {
+  .Testimonial_Wrapper {
+    height: 400px;
+  }
 }
