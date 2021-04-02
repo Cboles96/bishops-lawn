@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "674b30b92a35adc4866c0f5f90cea8c0",
+    "revision": "6aaf132c56886e08a1a4f3b1abf09c0d",
     "url": "/bishops-lawn/index.html"
   },
   {
-    "revision": "d52d5baca26556ad9f52",
-    "url": "/bishops-lawn/static/css/main.f41a0099.chunk.css"
+    "revision": "d26fb695272cbab29298",
+    "url": "/bishops-lawn/static/css/main.25e3201a.chunk.css"
   },
   {
-    "revision": "5ba704a4f8260cbeb313",
-    "url": "/bishops-lawn/static/js/2.f115c372.chunk.js"
+    "revision": "3292b61962cd00beed33",
+    "url": "/bishops-lawn/static/js/2.95787c9a.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/bishops-lawn/static/js/2.f115c372.chunk.js.LICENSE.txt"
+    "url": "/bishops-lawn/static/js/2.95787c9a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d52d5baca26556ad9f52",
-    "url": "/bishops-lawn/static/js/main.6ffb7a78.chunk.js"
+    "revision": "d26fb695272cbab29298",
+    "url": "/bishops-lawn/static/js/main.7eb1c57e.chunk.js"
   },
   {
     "revision": "afbd13a7adfbae9f94ef",
@@ -88,12 +88,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bishops-lawn/static/media/t-shirt-white.2d4a3aa0.png"
   },
   {
+    "revision": "f4636a46a61bb07f0cc58fdfa9dcda98",
+    "url": "/bishops-lawn/static/media/testimonial-david.f4636a46.jpeg"
+  },
+  {
     "revision": "72142fc6fb9b31e53fbcc62a7b940742",
     "url": "/bishops-lawn/static/media/testimonial-john.72142fc6.jpg"
   },
   {
     "revision": "6c2199f1e2d800a1ddd6891a7a5b1c5a",
     "url": "/bishops-lawn/static/media/testimonial-mackenzie.6c2199f1.jpeg"
+  },
+  {
+    "revision": "1fe01221a32ffd8553412e4a75fd1d59",
+    "url": "/bishops-lawn/static/media/testimonial-mallory.1fe01221.jpeg"
   },
   {
     "revision": "e8cf5d29fca7adbac65cfd2d72357fba",
