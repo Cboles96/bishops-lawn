@@ -5,7 +5,8 @@ import * as actions from "../../../store/actions/index";
 
 import PreviewButton from "../../../UI/PreviewButton/PreviewButton";
 import Services from "../../../components/Previews/Services/Services";
-import Testimonial from "../../../components/Previews/Testimonial/Testimonial";
+// import Testimonial from "../../../components/Previews/Testimonial-Container/Testimonial-Container";
+import Testimonial from '../../../components/Previews/Testimonial-Container/Testimonial-Container';
 import Store from "../../../components/Previews/Store/Store";
 import Backdrop from "../../../UI/Backdrop/Backdrop";
 import LoginModal from "../../../components/Login-Modal/Login-Modal";
@@ -36,7 +37,7 @@ class Homepage extends Component {
     let cancel = false;
     let cancelClass = null;
 
-    const loggedIn = false;
+    const loggedIn = true;
     if (!loggedIn) {
       setTimeout(() => {
         backdrop = true;

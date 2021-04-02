@@ -1,0 +1,58 @@
+.Testimonial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  height: 600px;
+  margin-bottom: 20px;
+}
+
+.Name_Image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Testimonial p {
+  width: 200px;
+  font-size: 1.5rem;
+  color: white;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.Testimonial img {
+  width: 300px;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.Testimonial h1 {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 3rem;
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 637px) {
+  .Testimonial {
+    min-width: 50%;
+    height: 400px;
+  }
+
+  .Testimonial_Mackenzie_Image h1 {
+    font-size: 2rem;
+  }
+
+  .Testimonial p {
+    display: none;
+  }
+
+  .Testimonial img {
+    width: 150px;
+  }
+
+  .Testimonial .Name_Image {
+    order: 0;
+  }
+}
