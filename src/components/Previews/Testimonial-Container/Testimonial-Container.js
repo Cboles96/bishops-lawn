@@ -16,7 +16,7 @@ const testimonialContainer = () => {
     john: {
       name: "John",
       text:
-        "I just moved to Nashville this past year and a buddy told me about Bishop's Lawn Care's services. A very friendly bunch they are! The pricing is fair and the result is exceptional!",
+        `"I just moved to Nashville this past year and a buddy told me about Bishop's Lawn Care's services. A very friendly bunch they are! The pricing is fair and the result is exceptional!"`,
       image: John,
       order: "-1",
       textAlign: "right",
@@ -24,24 +24,22 @@ const testimonialContainer = () => {
     mackenzie: {
       name: "Mackenzie",
       text:
-        "I live a busy lifestyle and lawn care has never been my specialty. I was relieved to find a team in Bishop's Lawn Care who take their work seriously and aim to please everytime!",
+        `"I live a busy lifestyle and lawn care has never been my specialty. I was relieved to find a team in Bishop's Lawn Care who take their work seriously and aim to please everytime!"`,
       image: Mackenzie,
       textAlign: "left",
     },
     david: {
       name: "David",
       text:
-        "My yard was getting really out of hand last summer and after some research I came across Bishop's Lawn Care.  I have no complaints!  Always on time and very nice people as well.",
+        `"My yard was getting really out of hand last summer and after some research I came across Bishop's Lawn Care.  I have no complaints!  Always on time and very nice people as well."`,
       image: David,
       order: "-1",
       textAlign: "right",
-      width: "300px",
-      height: "400px",
     },
     mallory: {
       name: "Mallory",
       text:
-        "I've personally recommended Bishop's Lawn Care to many of my friends.  The service is impeccable and my lawn has never looked greater!",
+        `"I've personally recommended Bishop's Lawn Care to many of my friends.  The service is impeccable and my lawn has never looked greater!"`,
       image: Mallory,
       textAlign: "left",
     },
@@ -73,8 +71,6 @@ const testimonialContainer = () => {
           image={testimonials.david.image}
           order={testimonials.david.order}
           textAlign={testimonials.david.textAlign}
-          width={testimonials.david.width}
-          height={testimonials.david.height}
         />
         <Testimonial
           name={testimonials.mallory.name}

@@ -133,12 +133,12 @@
 
   .Preview_Button_Inactive,
   .Preview_Button_Active {
-    height: 150px;
+    height: 100px;
   }
 
   .Preview_Button_Inactive h2,
   .Preview_Button_Active h2 {
-    height: 150px;
+    height: 100px;
   }
 
   /* .Services_Preview_Inactive h2,

@@ -8,11 +8,32 @@
   align-items: center;
   justify-content: flex-start;
   opacity: 0.9;
+  overflow-y: scroll;
 }
 
 .Store_Container h1,
 .Store_Container h2 {
   color: white;
+}
+
+.Store_Container::-webkit-scrollbar {
+  display: none;
+}
+
+.Store_Container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.Store_Items {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "t h m"
+    "tt ht mt";
+  align-items: center;
+  justify-items: center;
+  padding: 50px 100px;
 }
 
 .Percent {
@@ -24,27 +45,22 @@
   color: yellow;
 }
 
-.Store_Items {
-  width: 100%;
-  display: grid;
-  grid-template-areas: "t h m"
-                       "tt ht mt";
-  align-items: center;
-  justify-items: center;
+.Tshirt,
+.Hat,
+.Mug {
+  width: 300px;
+  opacity: 0.9;
 }
 
 .Tshirt {
-  width: 400px;
   grid-area: t;
 }
 
 .Hat {
-  width: 400px;
   grid-area: h;
 }
 
 .Mug {
-  width: 400px;
   grid-area: m;
   padding-top: 50px;
   padding-right: 50px;
@@ -65,7 +81,7 @@
 .Tshirt:hover,
 .Hat:hover,
 .Mug:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .Store_Container h3 {
@@ -74,7 +90,6 @@
 }
 
 @media (max-width: 1220px) {
-
   .Store_Container {
     height: 1600px;
   }
