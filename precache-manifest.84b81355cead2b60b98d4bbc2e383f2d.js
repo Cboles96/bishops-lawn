@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6aaf132c56886e08a1a4f3b1abf09c0d",
+    "revision": "59ec0ceb17788765bf7254dff2a9bba2",
     "url": "/bishops-lawn/index.html"
   },
   {
-    "revision": "d26fb695272cbab29298",
-    "url": "/bishops-lawn/static/css/main.25e3201a.chunk.css"
+    "revision": "3502c40363fa6096b950",
+    "url": "/bishops-lawn/static/css/main.f09bd110.chunk.css"
   },
   {
-    "revision": "3292b61962cd00beed33",
-    "url": "/bishops-lawn/static/js/2.95787c9a.chunk.js"
+    "revision": "defa3d877ff54220a6d2",
+    "url": "/bishops-lawn/static/js/2.ca36d03c.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/bishops-lawn/static/js/2.95787c9a.chunk.js.LICENSE.txt"
+    "url": "/bishops-lawn/static/js/2.ca36d03c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d26fb695272cbab29298",
-    "url": "/bishops-lawn/static/js/main.7eb1c57e.chunk.js"
+    "revision": "3502c40363fa6096b950",
+    "url": "/bishops-lawn/static/js/main.c82d16e3.chunk.js"
   },
   {
     "revision": "afbd13a7adfbae9f94ef",
@@ -76,8 +76,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bishops-lawn/static/media/grass2.12e0d1f2.png"
   },
   {
+    "revision": "7a23dc1c1bbaa5a68cb8cebdf45446e1",
+    "url": "/bishops-lawn/static/media/leaf-blower.7a23dc1c.png"
+  },
+  {
     "revision": "6f9f61581edd9a14e5071b3550b7848d",
     "url": "/bishops-lawn/static/media/logo2.6f9f6158.png"
+  },
+  {
+    "revision": "855f1dda8442dd6dfe758c072a9479ed",
+    "url": "/bishops-lawn/static/media/mower.855f1dda.png"
   },
   {
     "revision": "49eacfe2f500d1af9e768c8ab5079282",
@@ -106,5 +114,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e8cf5d29fca7adbac65cfd2d72357fba",
     "url": "/bishops-lawn/static/media/uhost-icon.e8cf5d29.png"
+  },
+  {
+    "revision": "b2c332dc732ca626ae4c904f712432c0",
+    "url": "/bishops-lawn/static/media/weed-eater.b2c332dc.png"
   }
 ]);

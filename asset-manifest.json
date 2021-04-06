@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bishops-lawn/static/css/main.25e3201a.chunk.css",
-    "main.js": "/bishops-lawn/static/js/main.7eb1c57e.chunk.js",
-    "main.js.map": "/bishops-lawn/static/js/main.7eb1c57e.chunk.js.map",
+    "main.css": "/bishops-lawn/static/css/main.f09bd110.chunk.css",
+    "main.js": "/bishops-lawn/static/js/main.c82d16e3.chunk.js",
+    "main.js.map": "/bishops-lawn/static/js/main.c82d16e3.chunk.js.map",
     "runtime-main.js": "/bishops-lawn/static/js/runtime-main.27cc4f41.js",
     "runtime-main.js.map": "/bishops-lawn/static/js/runtime-main.27cc4f41.js.map",
-    "static/js/2.95787c9a.chunk.js": "/bishops-lawn/static/js/2.95787c9a.chunk.js",
-    "static/js/2.95787c9a.chunk.js.map": "/bishops-lawn/static/js/2.95787c9a.chunk.js.map",
+    "static/js/2.ca36d03c.chunk.js": "/bishops-lawn/static/js/2.ca36d03c.chunk.js",
+    "static/js/2.ca36d03c.chunk.js.map": "/bishops-lawn/static/js/2.ca36d03c.chunk.js.map",
     "index.html": "/bishops-lawn/index.html",
-    "precache-manifest.a00b662cd5d28868401d68278adb8d34.js": "/bishops-lawn/precache-manifest.a00b662cd5d28868401d68278adb8d34.js",
+    "precache-manifest.84b81355cead2b60b98d4bbc2e383f2d.js": "/bishops-lawn/precache-manifest.84b81355cead2b60b98d4bbc2e383f2d.js",
     "service-worker.js": "/bishops-lawn/service-worker.js",
-    "static/css/main.25e3201a.chunk.css.map": "/bishops-lawn/static/css/main.25e3201a.chunk.css.map",
-    "static/js/2.95787c9a.chunk.js.LICENSE.txt": "/bishops-lawn/static/js/2.95787c9a.chunk.js.LICENSE.txt",
+    "static/css/main.f09bd110.chunk.css.map": "/bishops-lawn/static/css/main.f09bd110.chunk.css.map",
+    "static/js/2.ca36d03c.chunk.js.LICENSE.txt": "/bishops-lawn/static/js/2.ca36d03c.chunk.js.LICENSE.txt",
     "static/media/cap-white-front-logo.png": "/bishops-lawn/static/media/cap-white-front-logo.4f007b02.png",
     "static/media/dropdown-arrow.jpeg": "/bishops-lawn/static/media/dropdown-arrow.2e2ddc5b.jpeg",
     "static/media/gallery-1-temp.jpg": "/bishops-lawn/static/media/gallery-1-temp.769743de.jpg",
@@ -25,19 +25,22 @@
     "static/media/gallery-8-temp.jpg": "/bishops-lawn/static/media/gallery-8-temp.b4cd72da.jpg",
     "static/media/gallery-9-temp.jpg": "/bishops-lawn/static/media/gallery-9-temp.9114c7bf.jpg",
     "static/media/index.css": "/bishops-lawn/static/media/grass2.12e0d1f2.png",
+    "static/media/leaf-blower.png": "/bishops-lawn/static/media/leaf-blower.7a23dc1c.png",
     "static/media/logo2.png": "/bishops-lawn/static/media/logo2.6f9f6158.png",
+    "static/media/mower.png": "/bishops-lawn/static/media/mower.855f1dda.png",
     "static/media/mug-white-logo3.png": "/bishops-lawn/static/media/mug-white-logo3.49eacfe2.png",
     "static/media/t-shirt-white.png": "/bishops-lawn/static/media/t-shirt-white.2d4a3aa0.png",
     "static/media/testimonial-david.jpeg": "/bishops-lawn/static/media/testimonial-david.f4636a46.jpeg",
     "static/media/testimonial-john.jpg": "/bishops-lawn/static/media/testimonial-john.72142fc6.jpg",
     "static/media/testimonial-mackenzie.jpeg": "/bishops-lawn/static/media/testimonial-mackenzie.6c2199f1.jpeg",
     "static/media/testimonial-mallory.jpeg": "/bishops-lawn/static/media/testimonial-mallory.1fe01221.jpeg",
-    "static/media/uhost-icon.png": "/bishops-lawn/static/media/uhost-icon.e8cf5d29.png"
+    "static/media/uhost-icon.png": "/bishops-lawn/static/media/uhost-icon.e8cf5d29.png",
+    "static/media/weed-eater.png": "/bishops-lawn/static/media/weed-eater.b2c332dc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.27cc4f41.js",
-    "static/js/2.95787c9a.chunk.js",
-    "static/css/main.25e3201a.chunk.css",
-    "static/js/main.7eb1c57e.chunk.js"
+    "static/js/2.ca36d03c.chunk.js",
+    "static/css/main.f09bd110.chunk.css",
+    "static/js/main.c82d16e3.chunk.js"
   ]
 }
