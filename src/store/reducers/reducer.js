@@ -2,7 +2,7 @@ import * as actionTypes from "../actions/actionTypes";
 import { updateObject } from "../../shared/utility";
 
 const initialState = {
-  services: false,
+  about: false,
   testimonial: true,
   store: false,
   loginBackdrop: false,
@@ -17,9 +17,9 @@ const initialState = {
 
 // Homepage
 
-const servicesHandler = (state, action) => {
+const aboutHandler = (state, action) => {
   return updateObject(state, {
-    services: action.services,
+    about: action.about,
     testimonial: action.testimonial,
     store: action.store,
   });
@@ -27,7 +27,7 @@ const servicesHandler = (state, action) => {
 
 const testimonialHandler = (state, action) => {
   return updateObject(state, {
-    services: action.services,
+    about: action.about,
     testimonial: action.testimonial,
     store: action.store,
   });
@@ -35,7 +35,7 @@ const testimonialHandler = (state, action) => {
 
 const storeHandler = (state, action) => {
   return updateObject(state, {
-    services: action.services,
+    about: action.about,
     testimonial: action.testimonial,
     store: action.store,
   });
@@ -83,8 +83,8 @@ const closeCreditsModal = (state, action) => {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.OPEN_SERVICES:
-      return servicesHandler(state, action);
+    case actionTypes.OPEN_ABOUT:
+      return aboutHandler(state, action);
     case actionTypes.OPEN_TESTIMONIAL:
       return testimonialHandler(state, action);
     case actionTypes.OPEN_STORE:

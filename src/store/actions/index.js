@@ -1,5 +1,5 @@
 export {
-    servicesMouseOver,
+    aboutMouseOver,
     testimonialMouseOver,
     storeMouseOver,
     showLoginModal,

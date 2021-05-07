@@ -37,7 +37,7 @@ const PreviewButton = (props) => {
     <div className={classes.Preview_Button_Container}>
       <div
         className={
-          props.servicesState || props.testimonialState || props.storeState
+          props.aboutState || props.testimonialState || props.storeState
             ? classes.Preview_Button_Active
             : classes.Preview_Button_Inactive
         }

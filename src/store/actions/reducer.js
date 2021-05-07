@@ -2,28 +2,28 @@ import * as actionTypes from "./actionTypes";
 
 // Homepage
 
-export const servicesMouseOver = (services, testimonial, store) => {
+export const aboutMouseOver = (about, testimonial, store) => {
   return {
-    type: actionTypes.OPEN_SERVICES,
-    services: services,
+    type: actionTypes.OPEN_ABOUT,
+    about: about,
     testimonial: testimonial,
     store: store
   };
 };
 
-export const testimonialMouseOver = (services, testimonial, store) => {
+export const testimonialMouseOver = (about, testimonial, store) => {
   return {
     type: actionTypes.OPEN_TESTIMONIAL,
-    services: services,
+    about: about,
     testimonial: testimonial,
     store: store
   };
 };
 
-export const storeMouseOver = (services, testimonial, store) => {
+export const storeMouseOver = (about, testimonial, store) => {
   return {
     type: actionTypes.OPEN_STORE,
-    services: services,
+    about: about,
     testimonial: testimonial,
     store: store
   };

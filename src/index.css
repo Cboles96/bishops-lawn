@@ -8,16 +8,8 @@
   font-family: "Exo", sans-serif;
 }
 
-html {
-  height: 100%;
-  background-image: url("../src/assets/images/background/grass2.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 body {
   margin: 0;
-  font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

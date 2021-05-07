@@ -1,0 +1,31 @@
+.About_Container_Active {
+  height: 100%;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+  position: relative;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.About_Container_Inactive {
+  height: 800px;
+  background-image: linear-gradient(rgb(8, 185, 255), rgb(13, 104, 13));
+}
+
+.Section_Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.Section_Header h1,
+.Section_Header h2 {
+  color: white;
+  margin: 20px;
+}
+
+.Section_Header h2 span {
+  font-weight: bold;
+
+}

@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 
 import * as actions from "../../../store/actions/index";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import PreviewButton from "../../../UI/PreviewButton/PreviewButton";
-import Services from "../../../components/Previews/Services/Services";
-// import Testimonial from "../../../components/Previews/Testimonial-Container/Testimonial-Container";
-import Testimonial from '../../../components/Previews/Testimonial-Container/Testimonial-Container';
+import About from "../../../components/Previews/About/About";
+import Testimonial from "../../../components/Previews/Testimonial-Container/Testimonial-Container";
 import Store from "../../../components/Previews/Store/Store";
 import Backdrop from "../../../UI/Backdrop/Backdrop";
 import LoginModal from "../../../components/Login-Modal/Login-Modal";
@@ -18,7 +19,7 @@ import Aux from "../../../hoc/Aux";
 
 class Homepage extends Component {
   state = {
-    servicesActive: false,
+    aboutActive: false,
     testimonialActive: true,
     storeActive: false,
     backdrop: false,
@@ -51,11 +52,11 @@ class Homepage extends Component {
   }
 
   render() {
-    const servicesTag = "A Peek at our Services!";
+    const aboutTag = "A Peek at our about!";
     const testimonialTag = "What our Clients have to say...";
     const storeTag = "Check out our Virtual Store!";
 
-    let services = null;
+    let about = null;
     let testimonial = null;
     let store = null;
 
@@ -64,43 +65,43 @@ class Homepage extends Component {
     let cancel = false;
     let cancelClass = null;
 
-    const servicesMouseOverHandler = () => {
-      // this.setState({ services: true, testimonial: false, store: false });
-      services = true;
+    const aboutMouseOverHandler = () => {
+      // this.setState({ about: true, testimonial: false, store: false });
+      about = true;
       testimonial = false;
       store = false;
       this.setState({
-        servicesActive: true,
+        aboutActive: true,
         testimonialActive: false,
         storeActive: false,
       });
-      this.props.onServices(services, testimonial, store);
+      this.props.onAbout(about, testimonial, store);
     };
 
     const testimonialMouseOverHandler = () => {
-      // this.setState({ services: false, testimonial: true, store: false });
-      services = false;
+      // this.setState({ about: false, testimonial: true, store: false });
+      about = false;
       testimonial = true;
       store = false;
       this.setState({
-        servicesActive: false,
+        aboutActive: false,
         testimonialActive: true,
         storeActive: false,
       });
-      this.props.onTestimonial(services, testimonial, store);
+      this.props.onTestimonial(about, testimonial, store);
     };
 
     const storeMouseOverHandler = () => {
-      // this.setState({ services: false, testimonial: false, store: true });
-      services = false;
+      // this.setState({ about: false, testimonial: false, store: true });
+      about = false;
       testimonial = false;
       store = true;
       this.setState({
-        servicesActive: false,
+        aboutActive: false,
         testimonialActive: false,
         storeActive: true,
       });
-      this.props.onStore(services, testimonial, store);
+      this.props.onStore(about, testimonial, store);
     };
 
     const closeModal = () => {
@@ -146,9 +147,9 @@ class Homepage extends Component {
         <Jumbo />
         <div className={classes.Preview_Grid}>
           <PreviewButton
-            mouseover={servicesMouseOverHandler}
-            servicesState={this.state.servicesActive}
-            tag={servicesTag}
+            mouseover={aboutMouseOverHandler}
+            aboutState={this.state.aboutActive}
+            tag={aboutTag}
           />
           <PreviewButton
             mouseover={testimonialMouseOverHandler}
@@ -162,8 +163,10 @@ class Homepage extends Component {
           />
         </div>
 
-        {this.props.ser ? (
-          <Services servicesState={this.state.servicesActive} />
+        {this.props.about ? (
+          <About
+            aboutState={this.props.about}
+          />
         ) : null}
 
         {this.props.test ? (
@@ -182,7 +185,7 @@ class Homepage extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    ser: state.services,
+    about: state.about,
     test: state.testimonial,
     st: state.store,
     backdrop: state.loginBackdrop,
@@ -194,12 +197,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onServices: (services, testimonial, store) =>
-      dispatch(actions.servicesMouseOver(services, testimonial, store)),
-    onTestimonial: (services, testimonial, store) =>
-      dispatch(actions.testimonialMouseOver(services, testimonial, store)),
-    onStore: (services, testimonial, store) =>
-      dispatch(actions.storeMouseOver(services, testimonial, store)),
+    onAbout: (about, testimonial, store) =>
+      dispatch(actions.aboutMouseOver(about, testimonial, store)),
+    onTestimonial: (about, testimonial, store) =>
+      dispatch(actions.testimonialMouseOver(about, testimonial, store)),
+    onStore: (about, testimonial, store) =>
+      dispatch(actions.storeMouseOver(about, testimonial, store)),
     onShowLogin: (backdrop, modal, cancel, cancelClass) =>
       dispatch(actions.showLoginModal(backdrop, modal, cancel, cancelClass)),
     onCloseLogin: (backdrop, modal, cancel, cancelClass) =>
